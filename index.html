@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" href="assets/logo.avif" type="image/avif" />
+    <title>Trampolin Park</title>
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <img
+          src="assets/logo.avif"
+          alt="Logo de trampolin park"
+          class="header-logo"
+        />
+        <h1 class="header-title">Trampolink park</h1>
+      </header>
+
+      <section class="info">
+        <header class="info-header">
+          <div class="info-1">
+            <h2>¡Bienvenidos a Trampolín Park!</h2>
+            <p>
+              El lugar perfecto para saltar de emoción en tu próximo cumpleaños.
+              En Trampolín Park nos especializamos en alquilar espacios
+              diseñados especialmente para fiestas inolvidables, llenas de
+              diversión, energía y risas. Ofrecemos paquetes completos que
+              incluyen desde áreas de salto y juegos interactivos, hasta
+              servicios personalizados como decoración temática, animadores,
+              catering y mucho más. Ya sea una fiesta infantil o un evento
+              especial, ¡hacemos que cada celebración sea única y espectacular!
+            </p>
+          </div>
+
+          <div class="info-2">
+            <h2>¿Por qué elegirnos?</h2>
+            <ul>
+              <li>Espacios amplios y seguros para saltar.</li>
+              <li>Paquetes personalizados para cada ocasión.</li>
+              <li>Servicios adicionales como catering y decoración.</li>
+              <li>
+                Animadores y personal capacitado para garantizar la diversión.
+              </li>
+              <li>Ubicación estratégica y fácil acceso.</li>
+            </ul>
+          </div>
+          <div class="info-3">
+            <h2>¿Cómo funciona?</h2>
+            <ol>
+              <li>Selecciona la fecha y hora de tu evento.</li>
+              <li>Elige el paquete que mejor se adapte a tus necesidades.</li>
+              <li>Confirma tu reserva y realiza el pago.</li>
+              <li>¡Prepárate para una fiesta inolvidable!</li>
+            </ol>
+          </div>
+        </header>
+        <div class="cards-salones"></div>
+      </section>
+    </main>
+  </body>
+</html>
+
+<script type="module">
+  const $ = (el) => document.querySelector(el);
+  const $$ = (el) => document.querySelectorAll(el);
+
+  // mapear los salones
+  const $salones = $(".cards-salones");
+
+  fetch("./JSON/salones.json")
+    .then((res) => {
+      if (!res.ok) throw new Error("No se pudo cargar el archivo JSON");
+      return res.json();
+    })
+    .then((salones) => {
+      // Insertar las tarjetas en el DOM
+      $salones.innerHTML = salones
+        .map(
+          (salon) => `
+            <div class="card-salon">
+              <div class="card-salon-header">
+                <h1>${salon.titulo}</h1>
+                <div class="card-salon-status" style="background-color: ${
+                  salon.estado === "Reservado" ? "#ff0000" : "#00aa00"
+                }">
+                  ${
+                    salon.estado === "Reservado"
+                      ? `<span>Reservado</span>`
+                      : `<span>Disponible</span>`
+                  }
+                </div>
+              </div>
+              <h3>${salon.descripcion}</h3>
+              <div class="card-salon-info">
+                <div class="card-salon-details">
+                  <div class="card-salon-details-info">
+                    <p><strong>Dirección:</strong> ${salon.direccion}</p>
+                    <p><strong>Valor:</strong> $${salon.valor}</p>
+                  </div>
+                    ${
+                      salon.estado === "Reservado"
+                        ? ""
+                        : `<button class="card-button">Reservar</button>`
+                    }
+                </div>
+                    <img src="${salon.img}" alt="${
+            salon.titulo
+          }" class="card-salon-img" />
+              </div>
+            </div>
+          `
+        )
+        .join("");
+    })
+    .catch((error) => {
+      console.error("Error al cargar los salones:", error);
+    });
+</script>

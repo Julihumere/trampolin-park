@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "nombreCompleto": "Juan Pérez",
+    "fecha": "2025-05-10",
+    "tematica": "Espacial",
+    "valorTotal": 750,
+    "serviciosSeleccionados": [2, 3, 6]
+  },
+  {
+    "id": 2,
+    "nombreCompleto": "María González",
+    "fecha": "2025-06-15",
+    "tematica": "Pirata",
+    "valorTotal": 600,
+    "serviciosSeleccionados": [1, 5, 8]
+  },
+  {
+    "id": 3,
+    "nombreCompleto": "Carlos Ramírez",
+    "fecha": "2025-07-20",
+    "tematica": "Neón",
+    "valorTotal": 820,
+    "serviciosSeleccionados": [3, 4, 7]
+  },
+  {
+    "id": 4,
+    "nombreCompleto": "Laura Fernández",
+    "fecha": "2025-08-05",
+    "tematica": "Castillo",
+    "valorTotal": 680,
+    "serviciosSeleccionados": [2, 5, 8]
+  },
+  {
+    "id": 5,
+    "nombreCompleto": "Pedro López",
+    "fecha": "2025-09-12",
+    "tematica": "Superhéroes",
+    "valorTotal": 900,
+    "serviciosSeleccionados": [1, 3, 6, 7]
+  },
+  {
+    "id": 6,
+    "nombreCompleto": "Ana Torres",
+    "fecha": "2025-10-18",
+    "tematica": "Acuático",
+    "valorTotal": 720,
+    "serviciosSeleccionados": [2, 4, 8]
+  },
+  {
+    "id": 7,
+    "nombreCompleto": "Santiago Ríos",
+    "fecha": "2025-11-25",
+    "tematica": "Mágico",
+    "valorTotal": 770,
+    "serviciosSeleccionados": [1, 3, 5, 7]
+  },
+  {
+    "id": 8,
+    "nombreCompleto": "Gabriela Martínez",
+    "fecha": "2025-12-08",
+    "tematica": "Aventura",
+    "valorTotal": 650,
+    "serviciosSeleccionados": [2, 6, 8]
+  }
+]

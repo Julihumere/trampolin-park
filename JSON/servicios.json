@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "descripcion": "Animación y juegos dirigidos por un equipo de recreadores profesionales.",
+    "valor": 100
+  },
+  {
+    "id": 2,
+    "descripcion": "Decoración temática personalizada con globos y pancartas.",
+    "valor": 150
+  },
+  {
+    "id": 3,
+    "descripcion": "Catering con opciones de snacks, comidas rápidas y bebidas.",
+    "valor": 200
+  },
+  {
+    "id": 4,
+    "descripcion": "Show de magia en vivo con participación de los niños.",
+    "valor": 180
+  },
+  {
+    "id": 5,
+    "descripcion": "Alquiler de disfraces temáticos para los invitados.",
+    "valor": 120
+  },
+  {
+    "id": 6,
+    "descripcion": "Zona de realidad virtual con juegos interactivos.",
+    "valor": 250
+  },
+  {
+    "id": 7,
+    "descripcion": "Fotografía profesional y álbum digital del evento.",
+    "valor": 220
+  },
+  {
+    "id": 8,
+    "descripcion": "Pintacaritas y globoflexia para los niños.",
+    "valor": 90
+  }
+]

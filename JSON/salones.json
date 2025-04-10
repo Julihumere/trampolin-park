@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "titulo": "Salón Aventura",
+    "descripcion": "Un amplio salón temático con decoración de jungla y juegos interactivos.",
+    "direccion": "Av. Principal 123, Ciudad Central",
+    "valor": 250,
+    "estado": "Disponible",
+    "img": "../assets/salones/1.webp"
+  },
+  {
+    "id": 2,
+    "titulo": "Salón Espacial",
+    "descripcion": "Un espacio decorado con temática de galaxias y luces LED para una experiencia fuera de este mundo.",
+    "direccion": "Calle Luna 456, Ciudad Central",
+    "valor": 300,
+    "estado": "Reservado",
+    "img": "../assets/salones/2.webp"
+  },
+  {
+    "id": 3,
+    "titulo": "Salón Pirata",
+    "descripcion": "Un salón con temática de barcos piratas y una mini piscina de pelotas.",
+    "direccion": "Boulevard del Tesoro 789, Ciudad Central",
+    "valor": 280,
+    "estado": "Disponible",
+    "img": "../assets/salones/3.webp"
+  },
+  {
+    "id": 4,
+    "titulo": "Salón Neón",
+    "descripcion": "Un espacio moderno con luces fluorescentes y música para fiestas juveniles.",
+    "direccion": "Plaza Brillante 101, Ciudad Central",
+    "valor": 320,
+    "estado": "Reservado",
+    "img": "../assets/salones/4.webp"
+  },
+  {
+    "id": 5,
+    "titulo": "Salón Castillo",
+    "descripcion": "Un área inspirada en castillos medievales con juegos inflables y trajes de caballeros.",
+    "direccion": "Calle del Rey 202, Ciudad Central",
+    "valor": 290,
+    "estado": "Disponible",
+    "img": "../assets/salones/5.webp"
+  },
+  {
+    "id": 6,
+    "titulo": "Salón Acuático",
+    "descripcion": "Un salón con toboganes de agua y juegos de chorros para un evento refrescante.",
+    "direccion": "Avenida del Agua 303, Ciudad Central",
+    "valor": 350,
+    "estado": "Reservado",
+    "img": "../assets/salones/6.webp"
+  },
+  {
+    "id": 7,
+    "titulo": "Salón de los Superhéroes",
+    "descripcion": "Un lugar decorado con personajes de cómics y actividades de entrenamiento para pequeños héroes.",
+    "direccion": "Calle Justicia 404, Ciudad Central",
+    "valor": 270,
+    "estado": "Disponible",
+    "img": "../assets/salones/7.webp"
+  },
+  {
+    "id": 8,
+    "titulo": "Salón Mágico",
+    "descripcion": "Un salón con temática de magia y trucos de ilusionismo en vivo.",
+    "direccion": "Avenida Encantada 505, Ciudad Central",
+    "valor": 310,
+    "estado": "Reservado",
+    "img": "../assets/salones/8.webp"
+  }
+]

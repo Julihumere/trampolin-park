@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "idSitio": 1,
+    "rutaArchivo": "imagenes/salon_aventura.jpg"
+  },
+  {
+    "id": 2,
+    "idSitio": 2,
+    "rutaArchivo": "imagenes/salon_espacial.jpg"
+  },
+  {
+    "id": 3,
+    "idSitio": 3,
+    "rutaArchivo": "imagenes/salon_pirata.jpg"
+  },
+  {
+    "id": 4,
+    "idSitio": 4,
+    "rutaArchivo": "imagenes/salon_neon.jpg"
+  },
+  {
+    "id": 5,
+    "idSitio": 5,
+    "rutaArchivo": "imagenes/salon_castillo.jpg"
+  },
+  {
+    "id": 6,
+    "idSitio": 6,
+    "rutaArchivo": "imagenes/salon_acuatico.jpg"
+  },
+  {
+    "id": 7,
+    "idSitio": 7,
+    "rutaArchivo": "imagenes/salon_superheroes.jpg"
+  },
+  {
+    "id": 8,
+    "idSitio": 8,
+    "rutaArchivo": "imagenes/salon_magico.jpg"
+  }
+]
