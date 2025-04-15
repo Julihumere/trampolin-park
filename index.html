@@ -20,6 +20,9 @@
         </div>
         <nav class="navbar">
           <div class="navbar-container">
+            <button class="menu-toggle" aria-label="Abrir menú">
+              ☰
+            </button>
             <ul class="navbar-links">
               <li><a href="index.html">Inicio</a></li>
               <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
@@ -100,6 +103,14 @@
         </div>
       </footer>
     </main>
+    <script>
+      const toggleBtn = document.querySelector(".menu-toggle");
+      const navbarLinks = document.querySelector(".navbar-links");
+    
+      toggleBtn.addEventListener("click", () => {
+        navbarLinks.classList.toggle("active");
+      });
+    </script>  
   </body>
 </html>
 
