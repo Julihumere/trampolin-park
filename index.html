@@ -377,15 +377,18 @@
       $salones.innerHTML = salones
         .map(
           (salon) => `
-            <div class="col-md-6 col-lg-8 mb-6">
-              <div class="card h-100">
-                <img src="${salon.img}" class="card-img-top" alt="${salon.titulo}">
+            <div class="col-md-6 col-lg-10 mb-4">
+              <div class="card h-100 shadow-lg rounded-4 p-3 card-container">
+                <img src="${salon.img}" class="card-img-top rounded-4 img-fluid" alt="${salon.titulo}">
                 <div class="card-body d-flex flex-column">
-                  <h3 class="card-title"><strong>${salon.titulo}</strong></h5>
-                  <h6 class="card-subtitle mb-2 text-muted">${salon.descripcion}</h6>
-                  <p class="card-text"><strong>Dirección:</strong> ${salon.direccion}</p>
-                  <p class="card-text"><strong>Valor:</strong> $${salon.valor}</p>
-                      <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#reservaModal" data-salon-id="${salon.id}">Reservar</button>
+                  <h3 class="card-title"><strong>${salon.titulo}</strong></h3>
+                  <h6 class="card-text mb-2">${salon.descripcion}</h6>
+                  <br>
+                  <h5 class="card-text"><strong>Dirección:</strong> ${salon.direccion}</h5>
+                  <h4 class="card-text"><strong>Valor:</strong> $${salon.valor}</h4>
+                  <button class="btn btn-warning mt-auto" data-bs-toggle="modal" data-bs-target="#reservaModal" data-salon-id="${salon.id}">
+                    Reservar
+                  </button>
                 </div>
               </div>
             </div>

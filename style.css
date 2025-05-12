@@ -668,3 +668,19 @@ body {
   height: 300px; /* o lo que necesites */
   object-fit: cover;
 }
+
+.card-container {
+  background: #09008F;
+}
+
+.card-body {
+  background: #09008F;
+}
+
+.card-title {
+  color: #FFCA2C
+}
+
+.card-text {
+  color: white
+}
