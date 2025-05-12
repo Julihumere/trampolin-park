@@ -19,6 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
   height: auto;
   padding: 0;
@@ -321,11 +322,11 @@ body {
   color: #fff;
 }
 
-.menu-container {
+.menu-container-css {
   position: relative;
 }
 
-.menu-toggle {
+.menu-toggle-css {
   display: none;
 }
 
@@ -335,7 +336,7 @@ body {
   color: #000030;
 }
 
-.menu-content {
+.menu-content-css {
   display: none;
   position: absolute;
   top: 40px;
@@ -345,18 +346,18 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.menu-toggle:checked + .menu-label + .menu-content {
+.menu-toggle-css:checked + .menu-label + .menu-content-css {
   display: block;
 }
 
-.menu-content a {
+.menu-content-css a {
   color: #000030;
   text-decoration: none;
   padding: 8px 10px;
   display: block;
 }
 
-.menu-content a:hover {
+.menu-content-css a:hover {
   text-decoration: underline;
 }
 
@@ -424,11 +425,11 @@ body {
   transform: scale(1.05);
 }
 
-.menu-container {
+.menu-container-css {
   display: none;
 }
 
-.menu-toggle {
+.menu-toggle-css {
   display: none;
 }
 
@@ -544,7 +545,7 @@ body {
     width: 20%;
   }
 
-  .menu-container {
+  .menu-container-css {
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -562,7 +563,7 @@ body {
     font-size: 1.5rem;
   }
 
-  .menu-content {
+  .menu-content-css {
     width: 200%;
     max-height: 0;
     overflow: hidden;
@@ -574,12 +575,12 @@ body {
     z-index: 10;
   }
 
-  .menu-toggle:checked + .menu-label + .menu-content {
+  .menu-toggle-css:checked + .menu-label + .menu-content-css {
     max-height: 300px;
     transition: max-height 0.5s ease-in;
   }
 
-  .menu-content a {
+  .menu-content-css a {
     display: block;
     padding: 10px;
     border-bottom: 1px solid #eee;
@@ -611,7 +612,7 @@ body {
     width: 20%;
   }
 
-  .menu-container {
+  .menu-container-css {
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -629,7 +630,7 @@ body {
     font-size: 1.5rem;
   }
 
-  .menu-content {
+  .menu-content-css {
     width: 200%;
     max-height: 0;
     overflow: hidden;
@@ -640,12 +641,12 @@ body {
     margin-top: 5px;
   }
 
-  .menu-toggle:checked + .menu-label + .menu-content {
+  .menu-toggle-css:checked + .menu-label + .menu-content-css {
     max-height: 300px;
     transition: max-height 0.5s ease-in;
   }
 
-  .menu-content a {
+  .menu-content-css a {
     display: block;
     padding: 10px;
     border-bottom: 1px solid #eee;
@@ -653,7 +654,7 @@ body {
     text-decoration: none;
   }
 
-  .menu-content a:hover {
+  .menu-content-css a:hover {
     background-color: #f9f9f9;
   }
 }
@@ -670,17 +671,17 @@ body {
 }
 
 .card-container {
-  background: #09008F;
+  background: #09008f;
 }
 
 .card-body {
-  background: #09008F;
+  background: #09008f;
 }
 
 .card-title {
-  color: #FFCA2C
+  color: #ffca2c;
 }
 
 .card-text {
-  color: white
+  color: white;
 }

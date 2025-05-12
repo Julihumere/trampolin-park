@@ -22,7 +22,7 @@
           />
           <h1 class="header-title">Trampolink Park</h1>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light w-20">
           <div class="container-fluid">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-flex">
               <li class="nav-item mx-2">
@@ -37,16 +37,37 @@
                 <a class="nav-link" href="contacto.html">Contacto</a>
               </li>
             </ul>
-            <div class="d-lg-none">
-              <input type="checkbox" id="toggle" class="menu-toggle" />
-              <label for="toggle" class="menu-label">☰</label>
-              <div class="menu-content">
-                <a class="dropdown-item" href="index.html">Inicio</a>
-                <a class="dropdown-item" href="sobre-nosotros.html"
-                  >Sobre Nosotros</a
-                >
-                <a class="dropdown-item" href="contacto.html">Contacto</a>
-              </div>
+
+            <div class="btn-group d-lg-none">
+              <button
+                type="button"
+                class="bg-transparent border-0 text-light"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                style="font-size: 1.5rem"
+              >
+                ☰
+              </button>
+              <ul
+                style="background-color: #000; color: #fff"
+                class="dropdown-menu dropdown-menu-end"
+              >
+                <li>
+                  <a href="index.html" class="dropdown-item text-light"
+                    >Inicio</a
+                  >
+                </li>
+                <li>
+                  <a href="sobre-nosotros.html" class="dropdown-item text-light"
+                    >Sobre Nosotros</a
+                  >
+                </li>
+                <li>
+                  <a href="contacto.html" class="dropdown-item text-light"
+                    >Contacto</a
+                  >
+                </li>
+              </ul>
             </div>
           </div>
         </nav>
