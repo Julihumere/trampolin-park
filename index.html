@@ -236,8 +236,7 @@
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Fecha del Evento</label>
-
-                      <div class="mb-3" id="fechasContainer">
+                      <div id="fechasContainer">
                         <!-- Las fechas se generarán dinámicamente -->
                       </div>
                     </div>
@@ -312,7 +311,7 @@
     }
 
     return `
-      <select style="background-color: #000030; color: #fff"  class="form-select text-warning border-warning" id="selectHorario" name="horario">
+      <select style="background-color: #000030; color: #fff" class="form-select text-warning border-warning" id="selectHorario" name="horario">
         <option value="" selected disabled>Selecciona un horario</option>
         ${horarios
           .filter((horario) => horario.disponible)
@@ -327,11 +326,12 @@
   }
 
   function renderizarFechas(dias) {
+    console.log("Renderizando fechas con:", dias);
     if (!dias || dias.length === 0) {
       return '<div class="col-12 text-center text-warning">No hay fechas disponibles</div>';
     }
 
-    return `
+    const selectHtml = `
       <select style="background-color: #000030; color: #fff" class="form-select text-warning border-warning" id="selectFecha" name="fecha">
         <option value="" selected disabled>Selecciona una fecha</option>
         ${dias
@@ -343,6 +343,8 @@
           .join("")}
       </select>
     `;
+    console.log("HTML generado:", selectHtml);
+    return selectHtml;
   }
 
   // Si selecciono una fecha, se renderiza los horarios
@@ -396,7 +398,8 @@
         )
         .join("");
 
-      $$(".btn-primary").forEach((button) => {
+      // Agregar event listeners a los botones después de crearlos
+      $$(".btn-warning").forEach((button) => {
         button.addEventListener("click", (e) => {
           const salonId = e.target.getAttribute("data-salon-id");
           console.log("ID del salón seleccionado:", salonId);
