@@ -474,7 +474,7 @@ body {
 }
 
 .navbar-nav .nav-item:hover {
-  background-color: #333;
+  background-color: #191a74;
 }
 
 .nav-link {
@@ -485,6 +485,7 @@ body {
 .nav-link:hover {
   text-decoration: underline;
 }
+
 
 .menu-container {
   position: relative;
