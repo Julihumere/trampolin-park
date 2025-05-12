@@ -307,7 +307,6 @@
   let salonSeleccionado = null;
 
   function renderizarHorarios(horarios) {
-    console.log("Horarios recibidos:", horarios);
     if (!horarios || horarios.length === 0) {
       return '<div class="col-12 text-center text-warning">No hay horarios disponibles</div>';
     }
@@ -327,19 +326,18 @@
     `;
   }
 
-  function renderizarFechas(fechas) {
-    console.log("Fechas recibidas:", fechas);
-    if (!fechas || fechas.length === 0) {
+  function renderizarFechas(dias) {
+    if (!dias || dias.length === 0) {
       return '<div class="col-12 text-center text-warning">No hay fechas disponibles</div>';
     }
 
     return `
       <select style="background-color: #000030; color: #fff" class="form-select text-warning border-warning" id="selectFecha" name="fecha">
         <option value="" selected disabled>Selecciona una fecha</option>
-        ${fechas
+        ${dias
           .map(
-            (fecha) => `
-              <option value="${fecha.fecha}">${fecha.fecha}</option>
+            (dia) => `
+              <option value="${dia.fecha}">${dia.fecha}</option>
             `
           )
           .join("")}
@@ -347,7 +345,8 @@
     `;
   }
 
-  // Agregar event listener para el cambio de fecha
+  // Si selecciono una fecha, se renderiza los horarios
+
   document.addEventListener("DOMContentLoaded", function () {
     document.body.addEventListener("change", function (e) {
       if (e.target && e.target.id === "selectFecha") {
@@ -394,23 +393,25 @@
         )
         .join("");
 
-      $$(".card-button").forEach((button) => {
+      $$(".btn-primary").forEach((button) => {
         button.addEventListener("click", (e) => {
           const salonId = e.target.getAttribute("data-salon-id");
+          console.log("ID del salón seleccionado:", salonId);
           salonSeleccionado = salones.find((s) => s.id === parseInt(salonId));
+          console.log("Salón seleccionado:", salonSeleccionado);
 
           if (salonSeleccionado) {
             $(
               "#reservaModalLabel"
             ).textContent = `Reservar ${salonSeleccionado.titulo}`;
 
-            const fechasHtml = renderizarFechas(
-              salonSeleccionado.dias,
-              salonSeleccionado.horarios
-            );
-
+            // Renderizar fechas
+            console.log("Días del salón:", salonSeleccionado.dias);
+            const fechasHtml = renderizarFechas(salonSeleccionado.dias);
+            console.log("HTML generado para fechas:", fechasHtml);
             $("#fechasContainer").innerHTML = fechasHtml;
-            $("#selectHorario").setAttribute("disabled", "disabled");
+
+            // Resetear y deshabilitar el selector de horarios
             $("#horariosContainer").innerHTML = `
               <select class="form-select bg-dark text-warning border-warning" id="selectHorario" name="horario" disabled>
                 <option value="" selected disabled>Selecciona un horario</option>
@@ -424,4 +425,3 @@
       console.error("Error al cargar los salones:", error);
     });
 </script>
-
