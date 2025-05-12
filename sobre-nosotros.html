@@ -3,46 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="assets/logo.avif" type="image/avif" />
     <title>Sobre Nosotros - Trampolink Park</title>
   </head>
 
   <body>
-    <main class="container">
-      <header class="header">
-        <div class="header-container">
-          <img
-            src="assets/logo.avif"
-            alt="Logo de Trampolin Park"
-            class="header-logo"
-          />
+    <main class="container py-5">
+      <header class="header mb-5">
+        <div class="d-flex justify-content-between align-items-center">
+          <img src="assets/logo.avif" alt="Logo de Trampolin Park" class="header-logo" />
           <h1 class="header-title">Trampolink Park</h1>
         </div>
-        <nav class="navbar">
-          <div class="navbar-container">
-            <ul class="navbar-links">
-              <li><a href="index.html">Inicio</a></li>
-              <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
-              <li><a href="contacto.html">Contacto</a></li>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-flex">
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
             </ul>
-          </div>
-          <div class="menu-container">
-            <input type="checkbox" id="toggle" class="menu-toggle" />
-            <label for="toggle" class="menu-label">☰</label>
-            <div class="menu-content">
-              <a href="index.html">Inicio</a>
-              <a href="sobre-nosotros.html">Sobre Nosotros</a>
-              <a href="contacto.html">Contacto</a>
+            <div class="d-lg-none">
+              <input type="checkbox" id="toggle" class="menu-toggle" />
+              <label for="toggle" class="menu-label">☰</label>
+              <div class="menu-content">
+                <a class="dropdown-item" href="index.html">Inicio</a>
+                <a class="dropdown-item" href="sobre-nosotros.html">Sobre Nosotros</a>
+                <a class="dropdown-item" href="contacto.html">Contacto</a>
+              </div>
             </div>
           </div>
         </nav>
       </header>
 
-      <section class="sobre-nosotros info" id="sobre-nosotros">
-        <div class="info-historia">
-          <h2>Nuestra Historia</h2>
-          <p>
+      <section class="sobre-nosotros info py-5" id="sobre-nosotros">
+        <div class="info-historia container">
+          <h2 class="text-warning mb-4">Nuestra Historia</h2>
+          <p class="text-light">
             Trampolink Park nació en el corazón de Concordia, Entre Ríos, como
             el sueño de una familia apasionada por crear experiencias únicas
             para chicos y grandes. Todo comenzó en el año 2018, cuando los
@@ -51,16 +54,14 @@
             no existía un lugar así: un espacio donde la diversión, la seguridad
             y la celebración se combinaran.
           </p>
-
-          <p>
+          <p class="text-light">
             Con mucho esfuerzo y el apoyo de amigos y emprendedores locales,
             lograron abrir el primer salón en 2019 en un pequeño galpón
             reacondicionado en Av. San Lorenzo. Lo que empezó con un par de
             camas elásticas y juegos simples, rápidamente se transformó en un
             éxito gracias al boca a boca y a la calidez del servicio.
           </p>
-
-          <p>
+          <p class="text-light">
             En solo unos años, Trampolink Park fue creciendo. Incorporamos
             nuevas atracciones, ampliamos nuestras instalaciones y sumamos
             servicios personalizados como catering temático, animadores,
@@ -68,18 +69,17 @@
             segundo salón en otro punto clave de Concordia, reforzando nuestro
             compromiso con la comunidad y con cada familia que nos elige.
           </p>
-
-          <p>
+          <p class="text-light">
             Hoy, Trampolink Park no solo es un lugar para festejar cumpleaños,
             sino un espacio donde los recuerdos cobran vida. Nuestra historia
             sigue saltando alto, impulsada por la alegría de cada niño, la
             confianza de cada papá y mamá, y el amor por lo que hacemos.
           </p>
         </div>
-        <header class="info-header">
-          <div class="info-1">
-            <h2>Nuestra Vision</h2>
-            <p>
+        <header class="info-header container text-center">
+          <div class="info-1 mb-4">
+            <h2 class="text-warning">Nuestra Visión</h2>
+            <p class="text-light">
               En Trampolink Park soñamos con ser el espacio recreativo líder en
               Entre Ríos y más allá, donde cada celebración se transforme en una
               experiencia mágica, segura y memorable. Nuestra visión es crecer
@@ -89,19 +89,19 @@
               humana y compromiso con el bienestar de cada visitante.
             </p>
           </div>
-
-          <div class="info-3">
-            <h2>Nuestra Misión</h2>
-            <p>
+      
+          <div class="info-3 mb-4">
+            <h2 class="text-warning">Nuestra Misión</h2>
+            <p class="text-light">
               Brindar momentos de alegría, conexión y celebración a través de
               espacios especialmente diseñados para que todos puedan disfrutar y
               compartir.
             </p>
           </div>
-
+      
           <div class="info-2">
-            <h2>Nuestro Compromiso</h2>
-            <ul>
+            <h2 class="text-warning">Nuestro Compromiso</h2>
+            <ul class="list-unstyled text-light">
               <li>Seguridad ante todo.</li>
               <li>Atención al cliente cercana y amable.</li>
               <li>Eventos únicos y memorables.</li>

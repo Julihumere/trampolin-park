@@ -3,72 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="assets/logo.avif" type="image/avif" />
     <title>Trampolin Park</title>
   </head>
   <body>
-    <main class="container">
-      <header class="header">
-        <div class="header-container">
-          <img
-            src="assets/logo.avif"
-            alt="Logo de Trampolin Park"
-            class="header-logo"
-          />
+    <main class="container py-5">
+      <header class="header mb-5">
+        <div class="d-flex justify-content-between align-items-center">
+          <img src="assets/logo.avif" alt="Logo de Trampolin Park" class="header-logo" />
           <h1 class="header-title">Trampolink Park</h1>
         </div>
-        <nav class="navbar">
-          <div class="navbar-container">
-            <ul class="navbar-links">
-              <li><a href="index.html">Inicio</a></li>
-              <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
-              <li><a href="contacto.html">Contacto</a></li>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-flex">
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
             </ul>
-          </div>
-          <div class="menu-container">
-            <input type="checkbox" id="toggle" class="menu-toggle" />
-            <label for="toggle" class="menu-label">☰</label>
-            <div class="menu-content">
-              <a href="index.html">Inicio</a>
-              <a href="sobre-nosotros.html">Sobre Nosotros</a>
-              <a href="contacto.html">Contacto</a>
+            <div class="d-lg-none">
+              <input type="checkbox" id="toggle" class="menu-toggle" />
+              <label for="toggle" class="menu-label">☰</label>
+              <div class="menu-content">
+                <a class="dropdown-item" href="index.html">Inicio</a>
+                <a class="dropdown-item" href="sobre-nosotros.html">Sobre Nosotros</a>
+                <a class="dropdown-item" href="contacto.html">Contacto</a>
+              </div>
             </div>
           </div>
         </nav>
       </header>
-
-      <section class="info">
-        <header class="info-header">
-          <div class="info-1">
-            <h2>¡Bienvenidos a Trampolín Park!</h2>
-            <p>
-              El lugar perfecto para saltar de emoción en tu próximo cumpleaños.
-              En Trampolín Park nos especializamos en alquilar espacios
-              diseñados especialmente para fiestas inolvidables, llenas de
-              diversión, energía y risas. Ofrecemos paquetes completos que
-              incluyen desde áreas de salto y juegos interactivos, hasta
-              servicios personalizados como decoración temática, animadores,
-              catering y mucho más. Ya sea una fiesta infantil o un evento
-              especial, ¡hacemos que cada celebración sea única y espectacular!
+      <section class="info py-5">
+        <header class="info-header container">
+          <div class="info-1 mb-4 mb-lg-0">
+            <h2 class="text-warning">¡Bienvenidos a Trampolín Park!</h2>
+            <p class="text-light">
+              El lugar perfecto para saltar de emoción en tu próximo cumpleaños. En Trampolín Park nos especializamos en alquilar espacios diseñados especialmente para fiestas inolvidables, llenas de diversión, energía y risas. Ofrecemos paquetes completos que incluyen desde áreas de salto y juegos interactivos, hasta servicios personalizados como decoración temática, animadores, catering y mucho más. Ya sea una fiesta infantil o un evento especial, ¡hacemos que cada celebración sea única y espectacular!
             </p>
           </div>
-
-          <div class="info-2">
-            <h2>¿Por qué elegirnos?</h2>
-            <ul>
-              <li>Espacios amplios y seguros para saltar.</li>
-              <li>Paquetes personalizados para cada ocasión.</li>
-              <li>Servicios adicionales como catering y decoración.</li>
-              <li>
-                Animadores y personal capacitado para garantizar la diversión.
-              </li>
-              <li>Ubicación estratégica y fácil acceso.</li>
+          <div class="info-2 mb-4 mb-lg-0">
+            <h2 class="text-warning">¿Por qué elegirnos?</h2>
+            <ul class="list-unstyled text-light">
+              <li><i class="bi bi-star-fill text-warning"></i> Espacios amplios y seguros para saltar.</li>
+              <li><i class="bi bi-star-fill text-warning"></i> Paquetes personalizados para cada ocasión.</li>
+              <li><i class="bi bi-star-fill text-warning"></i> Servicios adicionales como catering y decoración.</li>
+              <li><i class="bi bi-star-fill text-warning"></i> Animadores y personal capacitado para garantizar la diversión.</li>
+              <li><i class="bi bi-star-fill text-warning"></i> Ubicación estratégica y fácil acceso.</li>
             </ul>
           </div>
           <div class="info-3">
-            <h2>¿Cómo funciona?</h2>
-            <ol>
+            <h2 class="text-warning">¿Cómo funciona?</h2>
+            <ol class="text-light">
               <li>Selecciona la fecha y hora de tu evento.</li>
               <li>Elige el paquete que mejor se adapte a tus necesidades.</li>
               <li>Confirma tu reserva y realiza el pago.</li>
@@ -78,6 +70,7 @@
         </header>
         <div class="cards-salones"></div>
       </section>
+      
       <footer class="footer">
         <div class="footer-content">
           <div class="footer-section brand">
