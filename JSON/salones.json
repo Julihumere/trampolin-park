@@ -6,7 +6,114 @@
     "direccion": "Av. Principal 123, Ciudad Central",
     "valor": 250,
     "estado": "Disponible",
-    "img": "../assets/salones/1.webp"
+    "img": "../assets/salones/1.webp",
+    "dias": [
+      {
+        "id": 1,
+        "fecha": "12/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "09:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "12:00",
+            "disponible": false
+          },
+          {
+            "id": 3,
+            "hora": "15:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "fecha": "13/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "09:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "12:00",
+            "disponible": false
+          },
+          {
+            "id": 3,
+            "hora": "15:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "fecha": "14/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "09:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "12:00",
+            "disponible": false
+          },
+          {
+            "id": 3,
+            "hora": "15:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "fecha": "15/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "09:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "12:00",
+            "disponible": false
+          },
+          {
+            "id": 3,
+            "hora": "15:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "fecha": "16/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "09:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "12:00",
+            "disponible": false
+          },
+          {
+            "id": 3,
+            "hora": "15:00",
+            "disponible": true
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 2,
@@ -15,7 +122,114 @@
     "direccion": "Calle Luna 456, Ciudad Central",
     "valor": 300,
     "estado": "Reservado",
-    "img": "../assets/salones/2.webp"
+    "img": "../assets/salones/2.webp",
+    "dias": [
+      {
+        "id": 1,
+        "fecha": "12/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": false
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "fecha": "13/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": false
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": false
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "fecha": "14/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": false
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "fecha": "15/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": false
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "fecha": "16/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": false
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 3,
@@ -24,7 +238,114 @@
     "direccion": "Boulevard del Tesoro 789, Ciudad Central",
     "valor": 280,
     "estado": "Disponible",
-    "img": "../assets/salones/3.webp"
+    "img": "../assets/salones/3.webp",
+    "dias": [
+      {
+        "id": 1,
+        "fecha": "12/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "14:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "17:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "fecha": "13/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "14:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "17:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "fecha": "14/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "14:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "17:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "fecha": "15/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "14:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "17:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "fecha": "16/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "14:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "17:00",
+            "disponible": true
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 4,
@@ -33,7 +354,114 @@
     "direccion": "Plaza Brillante 101, Ciudad Central",
     "valor": 320,
     "estado": "Reservado",
-    "img": "../assets/salones/4.webp"
+    "img": "../assets/salones/4.webp",
+    "dias": [
+      {
+        "id": 1,
+        "fecha": "12/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "09:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "12:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "15:00",
+            "disponible": false
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "fecha": "13/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "09:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "12:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "15:00",
+            "disponible": false
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "fecha": "14/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "09:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "12:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "15:00",
+            "disponible": false
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "fecha": "15/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "09:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "12:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "15:00",
+            "disponible": false
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "fecha": "16/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "09:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "12:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "15:00",
+            "disponible": false
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 5,
@@ -42,7 +470,114 @@
     "direccion": "Calle del Rey 202, Ciudad Central",
     "valor": 290,
     "estado": "Disponible",
-    "img": "../assets/salones/5.webp"
+    "img": "../assets/salones/5.webp",
+    "dias": [
+      {
+        "id": 1,
+        "fecha": "12/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "fecha": "13/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "fecha": "14/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "fecha": "15/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "fecha": "16/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": true
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 6,
@@ -51,7 +586,74 @@
     "direccion": "Avenida del Agua 303, Ciudad Central",
     "valor": 350,
     "estado": "Reservado",
-    "img": "../assets/salones/6.webp"
+    "img": "../assets/salones/6.webp",
+    "dias": [
+      {
+        "id": 1,
+        "fecha": "12/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "14:00",
+            "disponible": false
+          },
+          {
+            "id": 3,
+            "hora": "17:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "fecha": "13/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "fecha": "14/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "fecha": "15/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "fecha": "16/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": true
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 7,
@@ -60,7 +662,114 @@
     "direccion": "Calle Justicia 404, Ciudad Central",
     "valor": 270,
     "estado": "Disponible",
-    "img": "../assets/salones/7.webp"
+    "img": "../assets/salones/7.webp",
+    "dias": [
+      {
+        "id": 1,
+        "fecha": "12/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": false
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "fecha": "13/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": false
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "fecha": "14/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": false
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "fecha": "15/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": false
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "fecha": "16/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": false
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 8,
@@ -69,6 +778,113 @@
     "direccion": "Avenida Encantada 505, Ciudad Central",
     "valor": 310,
     "estado": "Reservado",
-    "img": "../assets/salones/8.webp"
+    "img": "../assets/salones/8.webp",
+    "dias": [
+      {
+        "id": 1,
+        "fecha": "12/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "14:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "17:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "fecha": "13/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "14:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "17:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "fecha": "14/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "14:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "17:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "fecha": "15/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "14:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "17:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "fecha": "16/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "14:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "17:00",
+            "disponible": true
+          }
+        ]
+      }
+    ]
   }
 ]

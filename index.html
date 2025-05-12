@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="assets/logo.avif" type="image/avif" />
     <title>Trampolin Park</title>
@@ -12,7 +15,11 @@
     <main class="container-fluid py-5">
       <header class="header mb-5">
         <div class="d-flex justify-content-between align-items-center">
-          <img src="assets/logo.avif" alt="Logo de Trampolin Park" class="header-logo" />
+          <img
+            src="assets/logo.avif"
+            alt="Logo de Trampolin Park"
+            class="header-logo"
+          />
           <h1 class="header-title">Trampolink Park</h1>
         </div>
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -22,7 +29,9 @@
                 <a class="nav-link" href="index.html">Inicio</a>
               </li>
               <li class="nav-item mx-2">
-                <a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a>
+                <a class="nav-link" href="sobre-nosotros.html"
+                  >Sobre Nosotros</a
+                >
               </li>
               <li class="nav-item mx-2">
                 <a class="nav-link" href="contacto.html">Contacto</a>
@@ -33,7 +42,9 @@
               <label for="toggle" class="menu-label">☰</label>
               <div class="menu-content">
                 <a class="dropdown-item" href="index.html">Inicio</a>
-                <a class="dropdown-item" href="sobre-nosotros.html">Sobre Nosotros</a>
+                <a class="dropdown-item" href="sobre-nosotros.html"
+                  >Sobre Nosotros</a
+                >
                 <a class="dropdown-item" href="contacto.html">Contacto</a>
               </div>
             </div>
@@ -45,17 +56,39 @@
           <div class="info-1 mb-4 mb-lg-0">
             <h2 class="text-warning">¡Bienvenidos a Trampolín Park!</h2>
             <p class="text-light">
-              El lugar perfecto para saltar de emoción en tu próximo cumpleaños. En Trampolín Park nos especializamos en alquilar espacios diseñados especialmente para fiestas inolvidables, llenas de diversión, energía y risas. Ofrecemos paquetes completos que incluyen desde áreas de salto y juegos interactivos, hasta servicios personalizados como decoración temática, animadores, catering y mucho más. Ya sea una fiesta infantil o un evento especial, ¡hacemos que cada celebración sea única y espectacular!
+              El lugar perfecto para saltar de emoción en tu próximo cumpleaños.
+              En Trampolín Park nos especializamos en alquilar espacios
+              diseñados especialmente para fiestas inolvidables, llenas de
+              diversión, energía y risas. Ofrecemos paquetes completos que
+              incluyen desde áreas de salto y juegos interactivos, hasta
+              servicios personalizados como decoración temática, animadores,
+              catering y mucho más. Ya sea una fiesta infantil o un evento
+              especial, ¡hacemos que cada celebración sea única y espectacular!
             </p>
           </div>
           <div class="info-2 mb-4 mb-lg-0">
             <h2 class="text-warning">¿Por qué elegirnos?</h2>
             <ul class="list-unstyled text-light">
-              <li><i class="bi bi-star-fill text-warning"></i> Espacios amplios y seguros para saltar.</li>
-              <li><i class="bi bi-star-fill text-warning"></i> Paquetes personalizados para cada ocasión.</li>
-              <li><i class="bi bi-star-fill text-warning"></i> Servicios adicionales como catering y decoración.</li>
-              <li><i class="bi bi-star-fill text-warning"></i> Animadores y personal capacitado para garantizar la diversión.</li>
-              <li><i class="bi bi-star-fill text-warning"></i> Ubicación estratégica y fácil acceso.</li>
+              <li>
+                <i class="bi bi-star-fill text-warning"></i> Espacios amplios y
+                seguros para saltar.
+              </li>
+              <li>
+                <i class="bi bi-star-fill text-warning"></i> Paquetes
+                personalizados para cada ocasión.
+              </li>
+              <li>
+                <i class="bi bi-star-fill text-warning"></i> Servicios
+                adicionales como catering y decoración.
+              </li>
+              <li>
+                <i class="bi bi-star-fill text-warning"></i> Animadores y
+                personal capacitado para garantizar la diversión.
+              </li>
+              <li>
+                <i class="bi bi-star-fill text-warning"></i> Ubicación
+                estratégica y fácil acceso.
+              </li>
             </ul>
           </div>
           <div class="info-3">
@@ -70,7 +103,7 @@
         </header>
         <div class="cards-salones"></div>
       </section>
-      
+
       <footer class="footer">
         <div class="footer-content">
           <div class="footer-section brand">
@@ -140,6 +173,122 @@
         </div>
       </footer>
     </main>
+    <!-- Modal de Reserva -->
+    <div
+      class="modal fade"
+      id="reservaModal"
+      tabindex="-1"
+      aria-labelledby="reservaModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div
+          class="modal-content"
+          style="background-color: #000030; color: #fff"
+        >
+          <div class="modal-header border-warning">
+            <h5 class="modal-title text-warning" id="reservaModalLabel">
+              Reservar Salón
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="reservation-form">
+                  <h3 class="text-warning">Información de Reserva</h3>
+                  <form>
+                    <div class="mb-3">
+                      <label for="nombre" class="form-label"
+                        >Nombre Completo</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control bg-transparent text-light border-warning"
+                        id="nombre"
+                        required
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="email" class="form-label"
+                        >Correo Electrónico</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control bg-transparent text-light border-warning"
+                        id="email"
+                        required
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="telefono" class="form-label">Teléfono</label>
+                      <input
+                        type="tel"
+                        class="form-control bg-transparent text-light border-warning"
+                        id="telefono"
+                        required
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Fecha del Evento</label>
+
+                      <div class="mb-3" id="fechasContainer">
+                        <!-- Las fechas se generarán dinámicamente -->
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Horario del Evento</label>
+
+                      <div class="mb-3" id="horariosContainer">
+                        <select
+                          class="form-select bg-dark text-warning border-warning"
+                          id="selectHorario"
+                          name="horario"
+                          disabled
+                        >
+                          <option value="" selected disabled>
+                            Selecciona un horario
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="invitados" class="form-label"
+                        >Número de Invitados</label
+                      >
+                      <input
+                        type="number"
+                        class="form-control bg-transparent text-light border-warning"
+                        id="invitados"
+                        required
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer border-warning">
+            <button
+              type="button"
+              class="btn btn-outline-warning"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button type="button" class="btn btn-warning">
+              Confirmar Reserva
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       const toggleBtn = document.querySelector(".menu-toggle");
       const navbarLinks = document.querySelector(".navbar-links");
@@ -155,6 +304,69 @@
   const $ = (el) => document.querySelector(el);
   const $$ = (el) => document.querySelectorAll(el);
 
+  let salonSeleccionado = null;
+
+  function renderizarHorarios(horarios) {
+    console.log("Horarios recibidos:", horarios);
+    if (!horarios || horarios.length === 0) {
+      return '<div class="col-12 text-center text-warning">No hay horarios disponibles</div>';
+    }
+
+    return `
+      <select style="background-color: #000030; color: #fff"  class="form-select text-warning border-warning" id="selectHorario" name="horario">
+        <option value="" selected disabled>Selecciona un horario</option>
+        ${horarios
+          .filter((horario) => horario.disponible)
+          .map(
+            (horario) => `
+              <option value="${horario.hora}">${horario.hora} hs</option>
+            `
+          )
+          .join("")}
+      </select>
+    `;
+  }
+
+  function renderizarFechas(fechas) {
+    console.log("Fechas recibidas:", fechas);
+    if (!fechas || fechas.length === 0) {
+      return '<div class="col-12 text-center text-warning">No hay fechas disponibles</div>';
+    }
+
+    return `
+      <select style="background-color: #000030; color: #fff" class="form-select text-warning border-warning" id="selectFecha" name="fecha">
+        <option value="" selected disabled>Selecciona una fecha</option>
+        ${fechas
+          .map(
+            (fecha) => `
+              <option value="${fecha.fecha}">${fecha.fecha}</option>
+            `
+          )
+          .join("")}
+      </select>
+    `;
+  }
+
+  // Agregar event listener para el cambio de fecha
+  document.addEventListener("DOMContentLoaded", function () {
+    document.body.addEventListener("change", function (e) {
+      if (e.target && e.target.id === "selectFecha") {
+        const fechaSeleccionada = e.target.value;
+        if (salonSeleccionado) {
+          const diaSeleccionado = salonSeleccionado.dias.find(
+            (dia) => dia.fecha === fechaSeleccionada
+          );
+          if (diaSeleccionado && diaSeleccionado.horarios) {
+            const horariosHtml = renderizarHorarios(diaSeleccionado.horarios);
+            $("#horariosContainer").innerHTML = horariosHtml;
+            $("#selectHorario").removeAttribute("disabled");
+          }
+        }
+      }
+    });
+  });
+
+  // mapear los salones
   const $salones = $(".cards-salones");
 
   fetch("./JSON/salones.json")
@@ -174,13 +386,39 @@
                   <h6 class="card-subtitle mb-2 text-muted">${salon.descripcion}</h6>
                   <p class="card-text"><strong>Dirección:</strong> ${salon.direccion}</p>
                   <p class="card-text"><strong>Valor:</strong> $${salon.valor}</p>
-                      <button class="btn btn-primary mt-auto">Reservar</button>
+                      <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#reservaModal" data-salon-id="${salon.id}">Reservar</button>
                 </div>
               </div>
             </div>
           `
         )
         .join("");
+
+      $$(".card-button").forEach((button) => {
+        button.addEventListener("click", (e) => {
+          const salonId = e.target.getAttribute("data-salon-id");
+          salonSeleccionado = salones.find((s) => s.id === parseInt(salonId));
+
+          if (salonSeleccionado) {
+            $(
+              "#reservaModalLabel"
+            ).textContent = `Reservar ${salonSeleccionado.titulo}`;
+
+            const fechasHtml = renderizarFechas(
+              salonSeleccionado.dias,
+              salonSeleccionado.horarios
+            );
+
+            $("#fechasContainer").innerHTML = fechasHtml;
+            $("#selectHorario").setAttribute("disabled", "disabled");
+            $("#horariosContainer").innerHTML = `
+              <select class="form-select bg-dark text-warning border-warning" id="selectHorario" name="horario" disabled>
+                <option value="" selected disabled>Selecciona un horario</option>
+              </select>
+            `;
+          }
+        });
+      });
     })
     .catch((error) => {
       console.error("Error al cargar los salones:", error);
