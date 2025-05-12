@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="assets/logo.avif" type="image/avif" />
     <title>Trampolin Park</title>
@@ -12,7 +15,11 @@
     <main class="container py-5">
       <header class="header mb-5">
         <div class="d-flex justify-content-between align-items-center">
-          <img src="assets/logo.avif" alt="Logo de Trampolin Park" class="header-logo" />
+          <img
+            src="assets/logo.avif"
+            alt="Logo de Trampolin Park"
+            class="header-logo"
+          />
           <h1 class="header-title">Trampolink Park</h1>
         </div>
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -22,7 +29,9 @@
                 <a class="nav-link" href="index.html">Inicio</a>
               </li>
               <li class="nav-item mx-2">
-                <a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a>
+                <a class="nav-link" href="sobre-nosotros.html"
+                  >Sobre Nosotros</a
+                >
               </li>
               <li class="nav-item mx-2">
                 <a class="nav-link" href="contacto.html">Contacto</a>
@@ -33,7 +42,9 @@
               <label for="toggle" class="menu-label">☰</label>
               <div class="menu-content">
                 <a class="dropdown-item" href="index.html">Inicio</a>
-                <a class="dropdown-item" href="sobre-nosotros.html">Sobre Nosotros</a>
+                <a class="dropdown-item" href="sobre-nosotros.html"
+                  >Sobre Nosotros</a
+                >
                 <a class="dropdown-item" href="contacto.html">Contacto</a>
               </div>
             </div>
@@ -45,17 +56,39 @@
           <div class="info-1 mb-4 mb-lg-0">
             <h2 class="text-warning">¡Bienvenidos a Trampolín Park!</h2>
             <p class="text-light">
-              El lugar perfecto para saltar de emoción en tu próximo cumpleaños. En Trampolín Park nos especializamos en alquilar espacios diseñados especialmente para fiestas inolvidables, llenas de diversión, energía y risas. Ofrecemos paquetes completos que incluyen desde áreas de salto y juegos interactivos, hasta servicios personalizados como decoración temática, animadores, catering y mucho más. Ya sea una fiesta infantil o un evento especial, ¡hacemos que cada celebración sea única y espectacular!
+              El lugar perfecto para saltar de emoción en tu próximo cumpleaños.
+              En Trampolín Park nos especializamos en alquilar espacios
+              diseñados especialmente para fiestas inolvidables, llenas de
+              diversión, energía y risas. Ofrecemos paquetes completos que
+              incluyen desde áreas de salto y juegos interactivos, hasta
+              servicios personalizados como decoración temática, animadores,
+              catering y mucho más. Ya sea una fiesta infantil o un evento
+              especial, ¡hacemos que cada celebración sea única y espectacular!
             </p>
           </div>
           <div class="info-2 mb-4 mb-lg-0">
             <h2 class="text-warning">¿Por qué elegirnos?</h2>
             <ul class="list-unstyled text-light">
-              <li><i class="bi bi-star-fill text-warning"></i> Espacios amplios y seguros para saltar.</li>
-              <li><i class="bi bi-star-fill text-warning"></i> Paquetes personalizados para cada ocasión.</li>
-              <li><i class="bi bi-star-fill text-warning"></i> Servicios adicionales como catering y decoración.</li>
-              <li><i class="bi bi-star-fill text-warning"></i> Animadores y personal capacitado para garantizar la diversión.</li>
-              <li><i class="bi bi-star-fill text-warning"></i> Ubicación estratégica y fácil acceso.</li>
+              <li>
+                <i class="bi bi-star-fill text-warning"></i> Espacios amplios y
+                seguros para saltar.
+              </li>
+              <li>
+                <i class="bi bi-star-fill text-warning"></i> Paquetes
+                personalizados para cada ocasión.
+              </li>
+              <li>
+                <i class="bi bi-star-fill text-warning"></i> Servicios
+                adicionales como catering y decoración.
+              </li>
+              <li>
+                <i class="bi bi-star-fill text-warning"></i> Animadores y
+                personal capacitado para garantizar la diversión.
+              </li>
+              <li>
+                <i class="bi bi-star-fill text-warning"></i> Ubicación
+                estratégica y fácil acceso.
+              </li>
             </ul>
           </div>
           <div class="info-3">
@@ -70,7 +103,7 @@
         </header>
         <div class="cards-salones"></div>
       </section>
-      
+
       <footer class="footer">
         <div class="footer-content">
           <div class="footer-section brand">
@@ -140,6 +173,44 @@
         </div>
       </footer>
     </main>
+    <!-- Modal de Reserva -->
+    <div
+      class="modal fade"
+      id="reservaModal"
+      tabindex="-1"
+      aria-labelledby="reservaModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="reservaModalLabel">Reservar Salón</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Aquí irá el contenido del modal -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button type="button" class="btn btn-primary">
+              Confirmar Reserva
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       const toggleBtn = document.querySelector(".menu-toggle");
       const navbarLinks = document.querySelector(".navbar-links");
@@ -170,38 +241,34 @@
           (salon) => `
             <div class="card-salon">
               <div class="card-salon-header">
-                <h1>${salon.titulo}</h1>
-                <div class="card-salon-status" style="background-color: ${
-                  salon.estado === "Reservado" ? "#ff0000" : "#00aa00"
-                }">
-                  ${
-                    salon.estado === "Reservado"
-                      ? `<span>Reservado</span>`
-                      : `<span>Disponible</span>`
-                  }
-                </div>
+                <h1 class='card-salon-title'>${salon.titulo}</h1>
               </div>
-              <h3>${salon.descripcion}</h3>
+              <h3 class='card-salon-description'>${salon.descripcion}</h3>
               <div class="card-salon-info">
                 <div class="card-salon-details">
                   <div class="card-salon-details-info">
                     <p><strong>Dirección:</strong> ${salon.direccion}</p>
                     <p><strong>Valor:</strong> $${salon.valor}</p>
                   </div>
-                    ${
-                      salon.estado === "Reservado"
-                        ? ""
-                        : `<button class="card-button">Reservar</button>`
-                    }
+                    <button class="card-button" data-bs-toggle="modal" data-bs-target="#reservaModal" data-salon-id="${salon.id}">Reservar</button>
                 </div>
-                    <img src="${salon.img}" alt="${
-            salon.titulo
-          }" class="card-salon-img" />
+                    <img src="${salon.img}" alt="${salon.titulo}" class="card-salon-img" />
               </div>
             </div>
           `
         )
         .join("");
+
+      // Agregar event listeners para los botones de reserva
+      $$(".card-button").forEach((button) => {
+        button.addEventListener("click", (e) => {
+          const salonId = e.target.getAttribute("data-salon-id");
+          const salon = salones.find((s) => s.id === salonId);
+          if (salon) {
+            $("#reservaModalLabel").textContent = `Reservar ${salon.titulo}`;
+          }
+        });
+      });
     })
     .catch((error) => {
       console.error("Error al cargar los salones:", error);
