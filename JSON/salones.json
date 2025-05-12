@@ -7,24 +7,111 @@
     "valor": 250,
     "estado": "Disponible",
     "img": "../assets/salones/1.webp",
-    "horarios": [
+    "dias": [
       {
         "id": 1,
-        "dia": "Lunes",
-        "hora": "09:00",
-        "disponible": true
+        "fecha": "12/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "09:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "12:00",
+            "disponible": false
+          },
+          {
+            "id": 3,
+            "hora": "15:00",
+            "disponible": true
+          }
+        ]
       },
       {
         "id": 2,
-        "dia": "Lunes",
-        "hora": "12:00",
-        "disponible": false
+        "fecha": "13/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "09:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "12:00",
+            "disponible": false
+          },
+          {
+            "id": 3,
+            "hora": "15:00",
+            "disponible": true
+          }
+        ]
       },
       {
         "id": 3,
-        "dia": "Lunes",
-        "hora": "15:00",
-        "disponible": true
+        "fecha": "14/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "09:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "12:00",
+            "disponible": false
+          },
+          {
+            "id": 3,
+            "hora": "15:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "fecha": "15/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "09:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "12:00",
+            "disponible": false
+          },
+          {
+            "id": 3,
+            "hora": "15:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "fecha": "16/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "09:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "12:00",
+            "disponible": false
+          },
+          {
+            "id": 3,
+            "hora": "15:00",
+            "disponible": true
+          }
+        ]
       }
     ]
   },
@@ -36,24 +123,111 @@
     "valor": 300,
     "estado": "Reservado",
     "img": "../assets/salones/2.webp",
-    "horarios": [
+    "dias": [
       {
         "id": 1,
-        "dia": "Martes",
-        "hora": "10:00",
-        "disponible": true
+        "fecha": "12/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": false
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": true
+          }
+        ]
       },
       {
         "id": 2,
-        "dia": "Martes",
-        "hora": "13:00",
-        "disponible": true
+        "fecha": "13/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": false
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": false
+          }
+        ]
       },
       {
         "id": 3,
-        "dia": "Martes",
-        "hora": "16:00",
-        "disponible": false
+        "fecha": "14/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": false
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "fecha": "15/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": false
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "fecha": "16/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": false
+          }
+        ]
       }
     ]
   },
@@ -65,24 +239,111 @@
     "valor": 280,
     "estado": "Disponible",
     "img": "../assets/salones/3.webp",
-    "horarios": [
+    "dias": [
       {
         "id": 1,
-        "dia": "Miércoles",
-        "hora": "11:00",
-        "disponible": false
+        "fecha": "12/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "14:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "17:00",
+            "disponible": true
+          }
+        ]
       },
       {
         "id": 2,
-        "dia": "Miércoles",
-        "hora": "14:00",
-        "disponible": true
+        "fecha": "13/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "14:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "17:00",
+            "disponible": true
+          }
+        ]
       },
       {
         "id": 3,
-        "dia": "Miércoles",
-        "hora": "17:00",
-        "disponible": true
+        "fecha": "14/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "14:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "17:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "fecha": "15/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "14:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "17:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "fecha": "16/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "14:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "17:00",
+            "disponible": true
+          }
+        ]
       }
     ]
   },
@@ -94,24 +355,111 @@
     "valor": 320,
     "estado": "Reservado",
     "img": "../assets/salones/4.webp",
-    "horarios": [
+    "dias": [
       {
         "id": 1,
-        "dia": "Jueves",
-        "hora": "09:00",
-        "disponible": true
+        "fecha": "12/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "09:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "12:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "15:00",
+            "disponible": false
+          }
+        ]
       },
       {
         "id": 2,
-        "dia": "Jueves",
-        "hora": "12:00",
-        "disponible": true
+        "fecha": "13/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "09:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "12:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "15:00",
+            "disponible": false
+          }
+        ]
       },
       {
         "id": 3,
-        "dia": "Jueves",
-        "hora": "15:00",
-        "disponible": false
+        "fecha": "14/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "09:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "12:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "15:00",
+            "disponible": false
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "fecha": "15/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "09:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "12:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "15:00",
+            "disponible": false
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "fecha": "16/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "09:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "12:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "15:00",
+            "disponible": false
+          }
+        ]
       }
     ]
   },
@@ -123,24 +471,111 @@
     "valor": 290,
     "estado": "Disponible",
     "img": "../assets/salones/5.webp",
-    "horarios": [
+    "dias": [
       {
         "id": 1,
-        "dia": "Viernes",
-        "hora": "10:00",
-        "disponible": false
+        "fecha": "12/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": true
+          }
+        ]
       },
       {
         "id": 2,
-        "dia": "Viernes",
-        "hora": "13:00",
-        "disponible": true
+        "fecha": "13/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": true
+          }
+        ]
       },
       {
         "id": 3,
-        "dia": "Viernes",
-        "hora": "16:00",
-        "disponible": true
+        "fecha": "14/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "fecha": "15/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "fecha": "16/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": true
+          }
+        ]
       }
     ]
   },
@@ -152,24 +587,71 @@
     "valor": 350,
     "estado": "Reservado",
     "img": "../assets/salones/6.webp",
-    "horarios": [
+    "dias": [
       {
         "id": 1,
-        "dia": "Sábado",
-        "hora": "11:00",
-        "disponible": true
+        "fecha": "12/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "14:00",
+            "disponible": false
+          },
+          {
+            "id": 3,
+            "hora": "17:00",
+            "disponible": true
+          }
+        ]
       },
       {
         "id": 2,
-        "dia": "Sábado",
-        "hora": "14:00",
-        "disponible": false
+        "fecha": "13/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": true
+          }
+        ]
       },
       {
         "id": 3,
-        "dia": "Sábado",
-        "hora": "17:00",
-        "disponible": true
+        "fecha": "14/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "fecha": "15/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "fecha": "16/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": true
+          }
+        ]
       }
     ]
   },
@@ -181,24 +663,111 @@
     "valor": 270,
     "estado": "Disponible",
     "img": "../assets/salones/7.webp",
-    "horarios": [
+    "dias": [
       {
         "id": 1,
-        "dia": "Domingo",
-        "hora": "10:00",
-        "disponible": true
+        "fecha": "12/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": false
+          }
+        ]
       },
       {
         "id": 2,
-        "dia": "Domingo",
-        "hora": "13:00",
-        "disponible": true
+        "fecha": "13/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": false
+          }
+        ]
       },
       {
         "id": 3,
-        "dia": "Domingo",
-        "hora": "16:00",
-        "disponible": false
+        "fecha": "14/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": false
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "fecha": "15/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": false
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "fecha": "16/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "10:00",
+            "disponible": true
+          },
+          {
+            "id": 2,
+            "hora": "13:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "16:00",
+            "disponible": false
+          }
+        ]
       }
     ]
   },
@@ -210,24 +779,111 @@
     "valor": 310,
     "estado": "Reservado",
     "img": "../assets/salones/8.webp",
-    "horarios": [
+    "dias": [
       {
         "id": 1,
-        "dia": "Lunes",
-        "hora": "11:00",
-        "disponible": false
+        "fecha": "12/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "14:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "17:00",
+            "disponible": true
+          }
+        ]
       },
       {
         "id": 2,
-        "dia": "Lunes",
-        "hora": "14:00",
-        "disponible": true
+        "fecha": "13/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "14:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "17:00",
+            "disponible": true
+          }
+        ]
       },
       {
         "id": 3,
-        "dia": "Lunes",
-        "hora": "17:00",
-        "disponible": true
+        "fecha": "14/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "14:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "17:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "fecha": "15/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "14:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "17:00",
+            "disponible": true
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "fecha": "16/05/2025",
+        "horarios": [
+          {
+            "id": 1,
+            "hora": "11:00",
+            "disponible": false
+          },
+          {
+            "id": 2,
+            "hora": "14:00",
+            "disponible": true
+          },
+          {
+            "id": 3,
+            "hora": "17:00",
+            "disponible": true
+          }
+        ]
       }
     ]
   }
