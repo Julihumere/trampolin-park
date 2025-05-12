@@ -155,7 +155,6 @@
   const $ = (el) => document.querySelector(el);
   const $$ = (el) => document.querySelectorAll(el);
 
-  // mapear los salones
   const $salones = $(".cards-salones");
 
   fetch("./JSON/salones.json")
@@ -164,39 +163,19 @@
       return res.json();
     })
     .then((salones) => {
-      // Insertar las tarjetas en el DOM
       $salones.innerHTML = salones
         .map(
           (salon) => `
-            <div class="card-salon">
-              <div class="card-salon-header">
-                <h1>${salon.titulo}</h1>
-                <div class="card-salon-status" style="background-color: ${
-                  salon.estado === "Reservado" ? "#ff0000" : "#00aa00"
-                }">
-                  ${
-                    salon.estado === "Reservado"
-                      ? `<span>Reservado</span>`
-                      : `<span>Disponible</span>`
-                  }
+            <div class="col-md-6 col-lg-8 mb-6">
+              <div class="card h-100">
+                <img src="${salon.img}" class="card-img-top" alt="${salon.titulo}">
+                <div class="card-body d-flex flex-column">
+                  <h3 class="card-title"><strong>${salon.titulo}</strong></h5>
+                  <h6 class="card-subtitle mb-2 text-muted">${salon.descripcion}</h6>
+                  <p class="card-text"><strong>Dirección:</strong> ${salon.direccion}</p>
+                  <p class="card-text"><strong>Valor:</strong> $${salon.valor}</p>
+                      <button class="btn btn-primary mt-auto">Reservar</button>
                 </div>
-              </div>
-              <h3>${salon.descripcion}</h3>
-              <div class="card-salon-info">
-                <div class="card-salon-details">
-                  <div class="card-salon-details-info">
-                    <p><strong>Dirección:</strong> ${salon.direccion}</p>
-                    <p><strong>Valor:</strong> $${salon.valor}</p>
-                  </div>
-                    ${
-                      salon.estado === "Reservado"
-                        ? ""
-                        : `<button class="card-button">Reservar</button>`
-                    }
-                </div>
-                    <img src="${salon.img}" alt="${
-            salon.titulo
-          }" class="card-salon-img" />
               </div>
             </div>
           `
@@ -207,3 +186,4 @@
       console.error("Error al cargar los salones:", error);
     });
 </script>
+
