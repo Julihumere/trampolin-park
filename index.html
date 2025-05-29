@@ -326,6 +326,906 @@
 
   let salonSeleccionado = null;
 
+  // Datos de los salones directamente en el código
+  const salones = [
+    {
+      id: 1,
+      titulo: "Salón Aventura",
+      descripcion:
+        "Un amplio salón temático con decoración de jungla y juegos interactivos.",
+      direccion: "Av. Principal 123, Ciudad Central",
+      valor: 250,
+      estado: "Disponible",
+      img: "./assets/salones/1.webp",
+      dias: [
+        {
+          id: 1,
+          fecha: "12/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "09:00",
+              disponible: true,
+            },
+            {
+              id: 2,
+              hora: "12:00",
+              disponible: false,
+            },
+            {
+              id: 3,
+              hora: "15:00",
+              disponible: true,
+            },
+          ],
+        },
+        {
+          id: 2,
+          fecha: "13/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "09:00",
+              disponible: true,
+            },
+            {
+              id: 2,
+              hora: "12:00",
+              disponible: false,
+            },
+            {
+              id: 3,
+              hora: "15:00",
+              disponible: true,
+            },
+          ],
+        },
+        {
+          id: 3,
+          fecha: "14/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "09:00",
+              disponible: true,
+            },
+            {
+              id: 2,
+              hora: "12:00",
+              disponible: false,
+            },
+            {
+              id: 3,
+              hora: "15:00",
+              disponible: true,
+            },
+          ],
+        },
+        {
+          id: 4,
+          fecha: "15/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "09:00",
+              disponible: true,
+            },
+            {
+              id: 2,
+              hora: "12:00",
+              disponible: false,
+            },
+            {
+              id: 3,
+              hora: "15:00",
+              disponible: true,
+            },
+          ],
+        },
+        {
+          id: 5,
+          fecha: "16/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "09:00",
+              disponible: true,
+            },
+            {
+              id: 2,
+              hora: "12:00",
+              disponible: false,
+            },
+            {
+              id: 3,
+              hora: "15:00",
+              disponible: true,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 2,
+      titulo: "Salón Espacial",
+      descripcion:
+        "Un espacio decorado con temática de galaxias y luces LED para una experiencia fuera de este mundo.",
+      direccion: "Calle Luna 456, Ciudad Central",
+      valor: 300,
+      estado: "Reservado",
+      img: "./assets/salones/2.webp",
+      dias: [
+        {
+          id: 1,
+          fecha: "12/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "10:00",
+              disponible: true,
+            },
+            {
+              id: 2,
+              hora: "13:00",
+              disponible: false,
+            },
+            {
+              id: 3,
+              hora: "16:00",
+              disponible: true,
+            },
+          ],
+        },
+        {
+          id: 2,
+          fecha: "13/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "10:00",
+              disponible: false,
+            },
+            {
+              id: 2,
+              hora: "13:00",
+              disponible: false,
+            },
+            {
+              id: 3,
+              hora: "16:00",
+              disponible: false,
+            },
+          ],
+        },
+        {
+          id: 3,
+          fecha: "14/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "10:00",
+              disponible: true,
+            },
+            {
+              id: 2,
+              hora: "13:00",
+              disponible: true,
+            },
+            {
+              id: 3,
+              hora: "16:00",
+              disponible: false,
+            },
+          ],
+        },
+        {
+          id: 4,
+          fecha: "15/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "10:00",
+              disponible: true,
+            },
+            {
+              id: 2,
+              hora: "13:00",
+              disponible: true,
+            },
+            {
+              id: 3,
+              hora: "16:00",
+              disponible: false,
+            },
+          ],
+        },
+        {
+          id: 5,
+          fecha: "16/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "10:00",
+              disponible: true,
+            },
+            {
+              id: 2,
+              hora: "13:00",
+              disponible: true,
+            },
+            {
+              id: 3,
+              hora: "16:00",
+              disponible: false,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 3,
+      titulo: "Salón Pirata",
+      descripcion:
+        "Un salón con temática de barcos piratas y una mini piscina de pelotas.",
+      direccion: "Boulevard del Tesoro 789, Ciudad Central",
+      valor: 280,
+      estado: "Disponible",
+      img: "./assets/salones/3.webp",
+      dias: [
+        {
+          id: 1,
+          fecha: "12/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "11:00",
+              disponible: false,
+            },
+            {
+              id: 2,
+              hora: "14:00",
+              disponible: true,
+            },
+            {
+              id: 3,
+              hora: "17:00",
+              disponible: true,
+            },
+          ],
+        },
+        {
+          id: 2,
+          fecha: "13/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "11:00",
+              disponible: false,
+            },
+            {
+              id: 2,
+              hora: "14:00",
+              disponible: true,
+            },
+            {
+              id: 3,
+              hora: "17:00",
+              disponible: true,
+            },
+          ],
+        },
+        {
+          id: 3,
+          fecha: "14/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "11:00",
+              disponible: false,
+            },
+            {
+              id: 2,
+              hora: "14:00",
+              disponible: true,
+            },
+            {
+              id: 3,
+              hora: "17:00",
+              disponible: true,
+            },
+          ],
+        },
+        {
+          id: 4,
+          fecha: "15/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "11:00",
+              disponible: false,
+            },
+            {
+              id: 2,
+              hora: "14:00",
+              disponible: true,
+            },
+            {
+              id: 3,
+              hora: "17:00",
+              disponible: true,
+            },
+          ],
+        },
+        {
+          id: 5,
+          fecha: "16/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "11:00",
+              disponible: false,
+            },
+            {
+              id: 2,
+              hora: "14:00",
+              disponible: true,
+            },
+            {
+              id: 3,
+              hora: "17:00",
+              disponible: true,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 4,
+      titulo: "Salón Neón",
+      descripcion:
+        "Un espacio moderno con luces fluorescentes y música para fiestas juveniles.",
+      direccion: "Plaza Brillante 101, Ciudad Central",
+      valor: 320,
+      estado: "Reservado",
+      img: "./assets/salones/4.webp",
+      dias: [
+        {
+          id: 1,
+          fecha: "12/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "09:00",
+              disponible: true,
+            },
+            {
+              id: 2,
+              hora: "12:00",
+              disponible: true,
+            },
+            {
+              id: 3,
+              hora: "15:00",
+              disponible: false,
+            },
+          ],
+        },
+        {
+          id: 2,
+          fecha: "13/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "09:00",
+              disponible: true,
+            },
+            {
+              id: 2,
+              hora: "12:00",
+              disponible: true,
+            },
+            {
+              id: 3,
+              hora: "15:00",
+              disponible: false,
+            },
+          ],
+        },
+        {
+          id: 3,
+          fecha: "14/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "09:00",
+              disponible: true,
+            },
+            {
+              id: 2,
+              hora: "12:00",
+              disponible: true,
+            },
+            {
+              id: 3,
+              hora: "15:00",
+              disponible: false,
+            },
+          ],
+        },
+        {
+          id: 4,
+          fecha: "15/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "09:00",
+              disponible: true,
+            },
+            {
+              id: 2,
+              hora: "12:00",
+              disponible: true,
+            },
+            {
+              id: 3,
+              hora: "15:00",
+              disponible: false,
+            },
+          ],
+        },
+        {
+          id: 5,
+          fecha: "16/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "09:00",
+              disponible: true,
+            },
+            {
+              id: 2,
+              hora: "12:00",
+              disponible: true,
+            },
+            {
+              id: 3,
+              hora: "15:00",
+              disponible: false,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 5,
+      titulo: "Salón Castillo",
+      descripcion:
+        "Un área inspirada en castillos medievales con juegos inflables y trajes de caballeros.",
+      direccion: "Calle del Rey 202, Ciudad Central",
+      valor: 290,
+      estado: "Disponible",
+      img: "./assets/salones/5.webp",
+      dias: [
+        {
+          id: 1,
+          fecha: "12/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "10:00",
+              disponible: false,
+            },
+            {
+              id: 2,
+              hora: "13:00",
+              disponible: true,
+            },
+            {
+              id: 3,
+              hora: "16:00",
+              disponible: true,
+            },
+          ],
+        },
+        {
+          id: 2,
+          fecha: "13/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "10:00",
+              disponible: false,
+            },
+            {
+              id: 2,
+              hora: "13:00",
+              disponible: true,
+            },
+            {
+              id: 3,
+              hora: "16:00",
+              disponible: true,
+            },
+          ],
+        },
+        {
+          id: 3,
+          fecha: "14/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "10:00",
+              disponible: false,
+            },
+            {
+              id: 2,
+              hora: "13:00",
+              disponible: true,
+            },
+            {
+              id: 3,
+              hora: "16:00",
+              disponible: true,
+            },
+          ],
+        },
+        {
+          id: 4,
+          fecha: "15/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "10:00",
+              disponible: false,
+            },
+            {
+              id: 2,
+              hora: "13:00",
+              disponible: true,
+            },
+            {
+              id: 3,
+              hora: "16:00",
+              disponible: true,
+            },
+          ],
+        },
+        {
+          id: 5,
+          fecha: "16/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "10:00",
+              disponible: false,
+            },
+            {
+              id: 2,
+              hora: "13:00",
+              disponible: true,
+            },
+            {
+              id: 3,
+              hora: "16:00",
+              disponible: true,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 6,
+      titulo: "Salón Acuático",
+      descripcion:
+        "Un salón con toboganes de agua y juegos de chorros para un evento refrescante.",
+      direccion: "Avenida del Agua 303, Ciudad Central",
+      valor: 350,
+      estado: "Reservado",
+      img: "./assets/salones/6.webp",
+      dias: [
+        {
+          id: 1,
+          fecha: "12/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "11:00",
+              disponible: true,
+            },
+            {
+              id: 2,
+              hora: "14:00",
+              disponible: false,
+            },
+            {
+              id: 3,
+              hora: "17:00",
+              disponible: true,
+            },
+          ],
+        },
+        {
+          id: 2,
+          fecha: "13/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "11:00",
+              disponible: true,
+            },
+          ],
+        },
+        {
+          id: 3,
+          fecha: "14/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "11:00",
+              disponible: true,
+            },
+          ],
+        },
+        {
+          id: 4,
+          fecha: "15/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "11:00",
+              disponible: true,
+            },
+          ],
+        },
+        {
+          id: 5,
+          fecha: "16/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "11:00",
+              disponible: true,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 7,
+      titulo: "Salón de los Superhéroes",
+      descripcion:
+        "Un lugar decorado con personajes de cómics y actividades de entrenamiento para pequeños héroes.",
+      direccion: "Calle Justicia 404, Ciudad Central",
+      valor: 270,
+      estado: "Disponible",
+      img: "./assets/salones/7.webp",
+      dias: [
+        {
+          id: 1,
+          fecha: "12/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "10:00",
+              disponible: true,
+            },
+            {
+              id: 2,
+              hora: "13:00",
+              disponible: true,
+            },
+            {
+              id: 3,
+              hora: "16:00",
+              disponible: false,
+            },
+          ],
+        },
+        {
+          id: 2,
+          fecha: "13/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "10:00",
+              disponible: true,
+            },
+            {
+              id: 2,
+              hora: "13:00",
+              disponible: true,
+            },
+            {
+              id: 3,
+              hora: "16:00",
+              disponible: false,
+            },
+          ],
+        },
+        {
+          id: 3,
+          fecha: "14/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "10:00",
+              disponible: true,
+            },
+            {
+              id: 2,
+              hora: "13:00",
+              disponible: true,
+            },
+            {
+              id: 3,
+              hora: "16:00",
+              disponible: false,
+            },
+          ],
+        },
+        {
+          id: 4,
+          fecha: "15/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "10:00",
+              disponible: true,
+            },
+            {
+              id: 2,
+              hora: "13:00",
+              disponible: true,
+            },
+            {
+              id: 3,
+              hora: "16:00",
+              disponible: false,
+            },
+          ],
+        },
+        {
+          id: 5,
+          fecha: "16/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "10:00",
+              disponible: true,
+            },
+            {
+              id: 2,
+              hora: "13:00",
+              disponible: true,
+            },
+            {
+              id: 3,
+              hora: "16:00",
+              disponible: false,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 8,
+      titulo: "Salón Mágico",
+      descripcion:
+        "Un salón con temática de magia y trucos de ilusionismo en vivo.",
+      direccion: "Avenida Encantada 505, Ciudad Central",
+      valor: 310,
+      estado: "Reservado",
+      img: "./assets/salones/8.webp",
+      dias: [
+        {
+          id: 1,
+          fecha: "12/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "11:00",
+              disponible: false,
+            },
+            {
+              id: 2,
+              hora: "14:00",
+              disponible: true,
+            },
+            {
+              id: 3,
+              hora: "17:00",
+              disponible: true,
+            },
+          ],
+        },
+        {
+          id: 2,
+          fecha: "13/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "11:00",
+              disponible: false,
+            },
+            {
+              id: 2,
+              hora: "14:00",
+              disponible: true,
+            },
+            {
+              id: 3,
+              hora: "17:00",
+              disponible: true,
+            },
+          ],
+        },
+        {
+          id: 3,
+          fecha: "14/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "11:00",
+              disponible: false,
+            },
+            {
+              id: 2,
+              hora: "14:00",
+              disponible: true,
+            },
+            {
+              id: 3,
+              hora: "17:00",
+              disponible: true,
+            },
+          ],
+        },
+        {
+          id: 4,
+          fecha: "15/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "11:00",
+              disponible: false,
+            },
+            {
+              id: 2,
+              hora: "14:00",
+              disponible: true,
+            },
+            {
+              id: 3,
+              hora: "17:00",
+              disponible: true,
+            },
+          ],
+        },
+        {
+          id: 5,
+          fecha: "16/05/2025",
+          horarios: [
+            {
+              id: 1,
+              hora: "11:00",
+              disponible: false,
+            },
+            {
+              id: 2,
+              hora: "14:00",
+              disponible: true,
+            },
+            {
+              id: 3,
+              hora: "17:00",
+              disponible: true,
+            },
+          ],
+        },
+      ],
+    },
+  ];
+
   function renderizarHorarios(horarios) {
     if (!horarios || horarios.length === 0) {
       return '<div class="col-12 text-center text-warning">No hay horarios disponibles</div>';
@@ -369,8 +1269,31 @@
   }
 
   // Si selecciono una fecha, se renderiza los horarios
-
   document.addEventListener("DOMContentLoaded", function () {
+    // Renderizar salones inmediatamente
+    const $salones = $(".cards-salones");
+    $salones.innerHTML = salones
+      .map(
+        (salon) => `
+          <div class="col-md-6 col-lg-10 mb-4">
+            <div class="card h-100 shadow-lg rounded-4 p-3 card-container">
+              <img src="${salon.img}" class="card-img-top rounded-4 img-fluid" alt="${salon.titulo}">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title"><strong>${salon.titulo}</strong></h3>
+                <h6 class="card-text mb-2">${salon.descripcion}</h6>
+                <br>
+                <h5 class="card-text"><strong>Dirección:</strong> ${salon.direccion}</h5>
+                <h4 class="card-text"><strong>Valor:</strong> $${salon.valor}</h4>
+                <button class="btn btn-warning mt-auto" data-bs-toggle="modal" data-bs-target="#reservaModal" data-salon-id="${salon.id}">
+                  Reservar
+                </button>
+              </div>
+            </div>
+          </div>
+        `
+      )
+      .join("");
+
     document.body.addEventListener("change", function (e) {
       if (e.target && e.target.id === "selectFecha") {
         const fechaSeleccionada = e.target.value;
@@ -386,69 +1309,34 @@
         }
       }
     });
-  });
 
-  // mapear los salones
-  const $salones = $(".cards-salones");
+    // Agregar event listeners a los botones
+    $$(".btn-warning").forEach((button) => {
+      button.addEventListener("click", (e) => {
+        const salonId = e.target.getAttribute("data-salon-id");
+        console.log("ID del salón seleccionado:", salonId);
+        salonSeleccionado = salones.find((s) => s.id === parseInt(salonId));
+        console.log("Salón seleccionado:", salonSeleccionado);
 
-  fetch("./JSON/salones.json")
-    .then((res) => {
-      if (!res.ok) throw new Error("No se pudo cargar el archivo JSON");
-      return res.json();
-    })
-    .then((salones) => {
-      $salones.innerHTML = salones
-        .map(
-          (salon) => `
-            <div class="col-md-6 col-lg-10 mb-4">
-              <div class="card h-100 shadow-lg rounded-4 p-3 card-container">
-                <img src="${salon.img}" class="card-img-top rounded-4 img-fluid" alt="${salon.titulo}">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="card-title"><strong>${salon.titulo}</strong></h3>
-                  <h6 class="card-text mb-2">${salon.descripcion}</h6>
-                  <br>
-                  <h5 class="card-text"><strong>Dirección:</strong> ${salon.direccion}</h5>
-                  <h4 class="card-text"><strong>Valor:</strong> $${salon.valor}</h4>
-                  <button class="btn btn-warning mt-auto" data-bs-toggle="modal" data-bs-target="#reservaModal" data-salon-id="${salon.id}">
-                    Reservar
-                  </button>
-                </div>
-              </div>
-            </div>
-          `
-        )
-        .join("");
+        if (salonSeleccionado) {
+          $(
+            "#reservaModalLabel"
+          ).textContent = `Reservar ${salonSeleccionado.titulo}`;
 
-      // Agregar event listeners a los botones después de crearlos
-      $$(".btn-warning").forEach((button) => {
-        button.addEventListener("click", (e) => {
-          const salonId = e.target.getAttribute("data-salon-id");
-          console.log("ID del salón seleccionado:", salonId);
-          salonSeleccionado = salones.find((s) => s.id === parseInt(salonId));
-          console.log("Salón seleccionado:", salonSeleccionado);
+          // Renderizar fechas
+          console.log("Días del salón:", salonSeleccionado.dias);
+          const fechasHtml = renderizarFechas(salonSeleccionado.dias);
+          console.log("HTML generado para fechas:", fechasHtml);
+          $("#fechasContainer").innerHTML = fechasHtml;
 
-          if (salonSeleccionado) {
-            $(
-              "#reservaModalLabel"
-            ).textContent = `Reservar ${salonSeleccionado.titulo}`;
-
-            // Renderizar fechas
-            console.log("Días del salón:", salonSeleccionado.dias);
-            const fechasHtml = renderizarFechas(salonSeleccionado.dias);
-            console.log("HTML generado para fechas:", fechasHtml);
-            $("#fechasContainer").innerHTML = fechasHtml;
-
-            // Resetear y deshabilitar el selector de horarios
-            $("#horariosContainer").innerHTML = `
-              <select class="form-select bg-dark text-warning border-warning" id="selectHorario" name="horario" disabled>
-                <option value="" selected disabled>Selecciona un horario</option>
-              </select>
-            `;
-          }
-        });
+          // Resetear y deshabilitar el selector de horarios
+          $("#horariosContainer").innerHTML = `
+            <select class="form-select bg-dark text-warning border-warning" id="selectHorario" name="horario" disabled>
+              <option value="" selected disabled>Selecciona un horario</option>
+            </select>
+          `;
+        }
       });
-    })
-    .catch((error) => {
-      console.error("Error al cargar los salones:", error);
     });
+  });
 </script>
