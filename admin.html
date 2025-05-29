@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="admin.style.css" />
+    <link rel="icon" href="assets/logo.avif" type="image/avif" />
+    <title>Admin</title>
+  </head>
+  <body>
+    <main class="container-fluid">
+      <div class="row">
+        <div id="table-salones" class="col-md-12">
+          <table class="container-table">
+            <thead class="container-thead">
+              <tr class="container-tr">
+                <th class="container-th">Titulo</th>
+                <th class="container-th">Descripcion</th>
+                <th class="container-th">Direccion</th>
+                <th class="container-th">Valor</th>
+              </tr>
+            </thead>
+
+            <tbody id="table-tbody" class="container-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+
+<script>
+  const $ = (el) => document.querySelector(el);
+  const $$ = (el) => document.querySelectorAll(el);
+
+  const session = JSON.parse(localStorage.getItem("session"));
+
+  if (!session) {
+    window.location.href = "login.html";
+  }
+
+  const tableBody = $("#table-tbody");
+
+  const salones = JSON.parse(localStorage.getItem("salones"));
+
+  if (!salones) {
+    tableBody.innerHTML = `
+      <h1>No hay salones</h1>
+    `;
+  }
+
+  console.log(salones);
+
+  tableBody.innerHTML = salones
+    .map(
+      (salon) => `
+      <tr>
+        <td class="container-td">${salon.titulo}</td>
+        <td class="container-td">${salon.descripcion}</td>
+        <td class="container-td">${salon.direccion}</td>
+        <td class="container-td">${salon.valor}</td>
+      </tr>
+ 
+  `
+    )
+    .join("");
+</script>
