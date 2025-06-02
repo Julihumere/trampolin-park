@@ -19,7 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
   min-height: 100vh;
   padding: 0;
@@ -385,7 +385,7 @@ body {
 }
 
 .galeria {
-  background-color: #000030;
+  height: 450px;
   text-align: center;
   color: #ffffff;
 }
@@ -424,6 +424,7 @@ body {
 
 .galeria-grid img:hover {
   transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
 }
 
 .menu-container-css {
@@ -474,7 +475,7 @@ body {
 
 .contact-form {
   width: 85%;
-  height: 350px;
+  height: 500px;
   margin: 20px auto;
   padding: 20px;
   border-radius: 10px;
@@ -497,7 +498,7 @@ body {
   padding: 10px;
   border-radius: 5px;
   border: none;
-  background-color: #000030;
+  background-color: rgba(0, 0, 0, 0.3);
   border: 1px solid #ccc;
   color: #fff;
   font-size: 1rem;
@@ -510,7 +511,7 @@ body {
   padding: 10px;
   border-radius: 5px;
   border: none;
-  background-color: #000030;
+  background-color: rgba(0, 0, 0, 0.3);
   border: 1px solid #ccc;
   color: #fff;
   font-size: 1rem;
@@ -521,8 +522,8 @@ body {
   width: 100px;
   padding: 10px;
   margin-top: 20px;
-  background-color: #0b009e;
-  color: #fff;
+  background-color: #ffde59;
+  color: #000030;
   font-size: 1.2rem;
   font-weight: bold;
   border-radius: 5px;
@@ -732,4 +733,9 @@ body {
   .blur-effect {
     top: 8rem;
   }
+}
+
+.login-container {
+  width: 100%;
+  height: 85vh;
 }

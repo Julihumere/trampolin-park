@@ -9,34 +9,95 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="assets/logo.avif" type="image/avif" />
-    <title>Login</title>
+    <title>Inicia sesión - Trampolink Park</title>
   </head>
   <body>
     <main class="container-fluid">
+      <header class="header">
+        <div class="d-flex justify-content-between align-items-center">
+          <img
+            src="assets/logo.avif"
+            alt="Logo de Trampolin Park"
+            class="header-logo"
+          />
+          <h1 class="header-title">Trampolink Park</h1>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light w-20">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-flex">
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="admin.html">Administrador</a>
+            </li>
+          </ul>
+
+          <div class="container-fluid">
+            <div class="btn-group d-lg-none">
+              <button
+                type="button"
+                class="bg-transparent border-0 text-light"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                style="font-size: 1.5rem"
+              >
+                ☰
+              </button>
+              <ul
+                style="background-color: #000; color: #fff"
+                class="dropdown-menu dropdown-menu-end"
+              >
+                <li>
+                  <a href="index.html" class="dropdown-item text-light"
+                    >Inicio</a
+                  >
+                </li>
+                <li>
+                  <a href="sobre-nosotros.html" class="dropdown-item text-light"
+                    >Sobre Nosotros</a
+                  >
+                </li>
+                <li>
+                  <a href="contacto.html" class="dropdown-item text-light"
+                    >Contacto</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
       <div
-        class="col-md-12 w-50 mx-auto h-100 d-flex justify-content-center align-items-center"
+        class="login-container col-md-12 mx-auto d-flex justify-content-center align-items-center"
       >
         <form action="" id="form">
           <div class="form-group mb-3">
-            <label class="form-label text-light" for="email">Email</label>
+            <label class="form-label text-light" for="email">Usuario</label>
             <input
               class="form-control"
               type="text"
               name="email"
               id="email"
-              placeholder="Email"
+              placeholder="Usuario"
               />
             </div>
             <div class="form-group">
-              <label class="form-label text-light" for="password">Password</label>
+              <label class="form-label text-light" for="password">Contraseña</label>
               <input
                 class="form-control mb-3"
                 type="password"
                 name="password"
                 id="password"
-                placeholder="Password"
+                placeholder="Contraseña"
             />
-            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" class="btn btn-primary">Iniciar sesión</button>
           </form>
         </div>
   

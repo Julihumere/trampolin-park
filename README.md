@@ -3,9 +3,11 @@ Este es un proyecto diseñado para la materia de "Introducción al Desarrollo We
 El repositorio donde se alojara el proyecto es: https://github.com/Julihumere/trampolin-park
 
 REQUISITOS PARA PODER EJECUTAR EL PROYECTO:
+
 - Live Server
 
 INSTRUCCIONES PARA EJECUTAR EL PROYECTO:
+
 1. Clonar el repositorio
 2. Click derecho en el archivo index.html
 3. Seleccionar "Abrir con Live Server"
@@ -13,6 +15,11 @@ INSTRUCCIONES PARA EJECUTAR EL PROYECTO:
 5. ¡Listo!
 
 Los integrantes son:
+
 - Humere Julio.
 - Benitez Emiliano.
 - Oyuela Lautaro.
+
+Credenciales para el Admin
+Usuario: admin
+Contraseña: admin
