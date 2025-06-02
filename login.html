@@ -66,6 +66,8 @@
 
   if (email.value !== "admin" || password.value !== "admin") {
     alert("Email o contraseña incorrectos");
+    email.value = "";
+    password.value = "";
   }
 
   const session = JSON.parse(localStorage.getItem("session"));
