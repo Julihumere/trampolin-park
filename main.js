@@ -7,7 +7,7 @@ const salones = [
     direccion: "Av. Principal 123, Ciudad Central",
     valor: 250,
     estado: "Disponible",
-    img: "../assets/salones/1.webp",
+    img: "http://127.0.0.1:5500/trampolin-park/assets/salones/1.webp",
     dias: [
       {
         id: 1,
@@ -124,7 +124,7 @@ const salones = [
     direccion: "Calle Luna 456, Ciudad Central",
     valor: 300,
     estado: "Reservado",
-    img: "../assets/salones/2.webp",
+    img: "http://127.0.0.1:5500/trampolin-park/assets/salones/2.webp",
     dias: [
       {
         id: 1,
@@ -241,7 +241,7 @@ const salones = [
     direccion: "Boulevard del Tesoro 789, Ciudad Central",
     valor: 280,
     estado: "Disponible",
-    img: "../assets/salones/3.webp",
+    img: "http://127.0.0.1:5500/trampolin-park/assets/salones/3.webp",
     dias: [
       {
         id: 1,
@@ -358,7 +358,7 @@ const salones = [
     direccion: "Plaza Brillante 101, Ciudad Central",
     valor: 320,
     estado: "Reservado",
-    img: "../assets/salones/4.webp",
+    img: "http://127.0.0.1:5500/trampolin-park/assets/salones/4.webp",
     dias: [
       {
         id: 1,
@@ -475,7 +475,7 @@ const salones = [
     direccion: "Calle del Rey 202, Ciudad Central",
     valor: 290,
     estado: "Disponible",
-    img: "../assets/salones/5.webp",
+    img: "http://127.0.0.1:5500/trampolin-park/assets/salones/5.webp",
     dias: [
       {
         id: 1,
@@ -592,7 +592,7 @@ const salones = [
     direccion: "Avenida del Agua 303, Ciudad Central",
     valor: 350,
     estado: "Reservado",
-    img: "../assets/salones/6.webp",
+    img: "http://127.0.0.1:5500/trampolin-park/assets/salones/6.webp",
     dias: [
       {
         id: 1,
@@ -669,7 +669,7 @@ const salones = [
     direccion: "Calle Justicia 404, Ciudad Central",
     valor: 270,
     estado: "Disponible",
-    img: "../assets/salones/7.webp",
+    img: "http://127.0.0.1:5500/trampolin-park/assets/salones/7.webp",
     dias: [
       {
         id: 1,
@@ -786,7 +786,7 @@ const salones = [
     direccion: "Avenida Encantada 505, Ciudad Central",
     valor: 310,
     estado: "Reservado",
-    img: "../assets/salones/8.webp",
+    img: "http://127.0.0.1:5500/trampolin-park/assets/salones/8.webp",
     dias: [
       {
         id: 1,
@@ -943,11 +943,17 @@ const servicios = [
 
 async function initSalones() {
   try {
-    localStorage.setItem("salones", JSON.stringify(salones));
-    console.log("Salones almacenados en localStorage");
+    const existingSalones = JSON.parse(localStorage.getItem("salones"));
+    if (!existingSalones || existingSalones.length === 0) {
+      localStorage.setItem("salones", JSON.stringify(salones));
+      console.log("Salones inicializados en localStorage");
+    } else {
+      console.log("Salones ya existen en localStorage");
+    }
   } catch (error) {
-    console.error("Error al cargar los salones:", error);
+    console.error("Error al inicializar los salones:", error);
   }
 }
 
 initSalones();
+

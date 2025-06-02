@@ -306,6 +306,8 @@ body {
   background-color: transparent;
   transition: background-color 0.3s ease;
   padding: 0 10px;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-nav .nav-item:hover {
