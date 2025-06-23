@@ -3,8 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const $$ = (el) => document.querySelectorAll(el);
   const tableBody = $("#table-tbody");
 
-  const session = JSON.parse(localStorage.getItem("session"));
-  if (!session) {
+
+  const accessToken = sessionStorage.getItem("accessToken");
+  if (!accessToken) {
     window.location.href = "login.html";
     return;
   }

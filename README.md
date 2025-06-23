@@ -11,8 +11,11 @@ INSTRUCCIONES PARA EJECUTAR EL PROYECTO:
 1. Clonar el repositorio
 2. Click derecho en el archivo index.html
 3. Seleccionar "Abrir con Live Server"
-4. Abrir el navegador y ir a la dirección http://127.0.0.1:5500/trampolin-park/
-5. ¡Listo!
+4. Verificar que Live Server se este ejecutando en el puerto 5500
+5. Abrir el navegador y ir a la dirección http://127.0.0.1:5500/trampolin-park/
+6. ¡Listo!
+
+-- NOTA: Si ha ejecutado versiones viejas de la web asegurese de limpiar la memoria caché y el local storage del navegador para no tener problemas con la nueva versión.
 
 Los integrantes son:
 
@@ -21,5 +24,5 @@ Los integrantes son:
 - Oyuela Lautaro.
 
 Credenciales para el Admin
-Usuario: admin
-Contraseña: admin
+Usuario: emilys
+Contraseña: emilyspass
