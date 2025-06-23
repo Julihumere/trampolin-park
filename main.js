@@ -944,11 +944,18 @@ const servicios = [
 async function initSalones() {
   try {
     const existingSalones = JSON.parse(localStorage.getItem("salones"));
+    const existingServicios = JSON.parse(localStorage.getItem("servicios"));
     if (!existingSalones || existingSalones.length === 0) {
       localStorage.setItem("salones", JSON.stringify(salones));
       console.log("Salones inicializados en localStorage");
     } else {
       console.log("Salones ya existen en localStorage");
+    }
+    if (!existingServicios || existingServicios.length === 0) {
+      localStorage.setItem("servicios", JSON.stringify(servicios));
+      console.log("Servicios inicializados en localStorage");
+    } else {
+      console.log("Servicios ya existen en localStorage");
     }
   } catch (error) {
     console.error("Error al inicializar los salones:", error);

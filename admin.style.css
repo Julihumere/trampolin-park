@@ -28,7 +28,6 @@ body {
 .container-table {
   display: table;
   width: 100%;
-  max-width: 1200px;
   background-color: #02050f;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -88,6 +87,60 @@ body {
 .container-th:nth-child(4),
 .container-td:nth-child(4) {
   width: 15%;
+}
+
+.container-table-servicios {
+  display: table;
+  width: 100%;
+  background-color: #02050f;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.container-thead-servicios {
+  display: table-header-group;
+  background-color: #000;
+}
+
+.container-tr-servicios {
+  display: table-row;
+}
+
+.container-th-servicios {
+  display: table-cell;
+  padding: 16px;
+  font-weight: 600;
+  color: #fff;
+  border-bottom: 2px solid #111;
+  text-align: left;
+}
+
+.container-tbody-servicios {
+  display: table-row-group;
+}
+
+.container-tbody-servicios tr:hover {
+  background-color: #000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.container-td-servicios {
+  display: table-cell;
+  padding: 12px 16px;
+  border-bottom: 1px solid #111;
+  color: #fff;
+}
+
+.container-th-servicios:nth-child(1),
+.container-td-servicios:nth-child(1) {
+  width: 80%;
+}
+
+.container-th-servicios:nth-child(2),
+.container-td-servicios:nth-child(2) {
+  width: 20%;
 }
 
 .header {

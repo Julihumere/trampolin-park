@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const $ = (el) => document.querySelector(el);
   const $$ = (el) => document.querySelectorAll(el);
-  const tableBody = $("#table-tbody");
-
+  const tableBodySalones = $("#table-tbody-salones");
+  const tableBodyServicios = $("#table-tbody-servicios");
 
   const accessToken = sessionStorage.getItem("accessToken");
   if (!accessToken) {
@@ -13,11 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const renderSalones = () => {
     const salones = JSON.parse(localStorage.getItem("salones")) || [];
     if (salones.length === 0) {
-      tableBody.innerHTML = `<h1>No hay salones</h1>`;
+      tableBodySalones.innerHTML = `<h1>No hay salones</h1>`;
       return;
     }
 
-    tableBody.innerHTML = salones
+    tableBodySalones.innerHTML = salones
       .map(
         (salon) => `
         <tr class="salon-row" data-id="${salon.id}">
@@ -129,5 +129,96 @@ document.addEventListener("DOMContentLoaded", () => {
     renderSalones();
   });
 
+  const renderServicios = () => {
+    const servicios = JSON.parse(localStorage.getItem("servicios")) || [];
+    if (servicios.length === 0) {
+      tableBodyServicios.innerHTML = `<h1>No hay servicios</h1>`;
+      return;
+    }
+
+    tableBodyServicios.innerHTML = servicios
+      .map(
+        (servicio) => `
+        <tr class="servicio-row" data-id="${servicio.id}">
+          <td class="container-td">${servicio.descripcion}</td>
+          <td class="container-td">$ ${servicio.valor}</td>
+        </tr>
+      `
+      )
+      .join("");
+
+    $$(".servicio-row").forEach((row) => {
+      row.addEventListener("click", () => {
+        const id = parseInt(row.dataset.id);
+        const servicios = JSON.parse(localStorage.getItem("servicios")) || [];
+        const servicio = servicios.find((s) => s.id === id);
+        if (!servicio) return;
+
+        $("#edit-idServicio").value = servicio.id;
+        $("#edit-descripcionServicio").value = servicio.descripcion;
+        $("#edit-valorServicio").value = servicio.valor;
+
+        const modal = new bootstrap.Modal($("#editarServicioModal"));
+        modal.show();
+      });
+    });
+  };
+
+  // Agregar servicio
+  $("#agregarBtnServicio").addEventListener("click", () => {
+    const descripcion = $("#descripcionServicio").value.trim();
+    const valor = Number($("#valorServicio").value.trim());
+
+    if (!descripcion || !valor) {
+      alert("Todos los campos son obligatorios.");
+      return;
+    }
+
+    const servicios = JSON.parse(localStorage.getItem("servicios")) || [];
+    const nuevoId =
+      servicios.length > 0 ? Math.max(...servicios.map((s) => s.id)) + 1 : 1;
+
+    const nuevoServicio = {
+      id: nuevoId,
+      descripcion,
+      valor,
+    };
+
+    servicios.push(nuevoServicio);
+    localStorage.setItem("servicios", JSON.stringify(servicios));
+    $("#servicioForm").reset();
+    bootstrap.Modal.getInstance($("#agregarServicioModal")).hide();
+    renderServicios();
+  });
+
+  // Guardar cambios en edición de servicio
+  $("#guardarCambiosBtnServicio").addEventListener("click", () => {
+    const id = parseInt($("#edit-idServicio").value);
+    const servicios = JSON.parse(localStorage.getItem("servicios")) || [];
+    const index = servicios.findIndex((s) => s.id === id);
+    if (index === -1) return;
+
+    servicios[index] = {
+      ...servicios[index],
+      descripcion: $("#edit-descripcionServicio").value.trim(),
+      valor: parseFloat($("#edit-valorServicio").value),
+    };
+
+    localStorage.setItem("servicios", JSON.stringify(servicios));
+    bootstrap.Modal.getInstance($("#editarServicioModal")).hide();
+    renderServicios();
+  });
+
+  // Eliminar servicio
+  $("#eliminarServicioBtn").addEventListener("click", () => {
+    const id = parseInt($("#edit-idServicio").value);
+    let servicios = JSON.parse(localStorage.getItem("servicios")) || [];
+    servicios = servicios.filter((s) => s.id !== id);
+    localStorage.setItem("servicios", JSON.stringify(servicios));
+    bootstrap.Modal.getInstance($("#editarServicioModal")).hide();
+    renderServicios();
+  });
+
   renderSalones();
+  renderServicios();
 });
