@@ -74,22 +74,22 @@
           </div>
         </nav>
       </header>
-    <section>
-      <div class="d-flex justify-content-start mb-2">
-      <button onclick="history.back()" class="btn btn-outline-light">
-        ⬅ Volver
-      </button>
-    </div>
-        <h2 class="mb-3" style="color: #fff">Lista de usuarios</h2>
-        <div class="table-responsive py-3">
+      <section class="w-100 d-flex flex-column align-items-center">
+        <div style="width: 90%" class="justify-content-start mb-2">
+          <button onclick="history.back()" class="btn btn-outline-light">
+            ⬅ Volver
+          </button>
+        </div>
+        <h2 class="mb-5" style="color: #fff">Usuarios registrados</h2>
+        <div class="w-100">
           <table class="container-table">
             <thead class="container-thead">
-              <tr class="container-tr">
-                <th class="container-th">ID</th>
-                <th class="container-th">Usuario</th>
-                <th class="container-th">Nombre</th>
-                <th class="container-th">Email</th>
-                <th class="container-th">Teléfono</th>
+              <tr class="container-tr-users">
+                <th class="container-th-users">ID</th>
+                <th class="container-th-users">Usuario</th>
+                <th class="container-th-users">Nombre</th>
+                <th class="container-th-users">Email</th>
+                <th class="container-th-users">Teléfono</th>
               </tr>
             </thead>
             <tbody id="users-tbody" class="container-tbody"></tbody>
