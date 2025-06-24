@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const $$ = (el) => document.querySelectorAll(el);
   const tableBodySalones = $("#table-tbody-salones");
   const tableBodyServicios = $("#table-tbody-servicios");
+  const tableBodyPresupuestos = $("#table-tbody-presupuestos");
 
   const accessToken = sessionStorage.getItem("accessToken");
   if (!accessToken) {
@@ -219,6 +220,178 @@ document.addEventListener("DOMContentLoaded", () => {
     renderServicios();
   });
 
+const servicios = JSON.parse(localStorage.getItem("servicios")) || [];
+const contenedorServicios = document.getElementById("serviciosCheckboxes");
+contenedorServicios.innerHTML = servicios
+  .map(
+    (servicio) => `
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="${servicio.id}" id="servicio-${servicio.id}">
+      <label class="form-check-label" for="servicio-${servicio.id}">
+        ${servicio.descripcion} ($${servicio.valor})
+      </label>
+    </div>
+  `
+  )
+  .join("");
+
+  const renderPresupuestos = () => {
+    const presupuestos = JSON.parse(localStorage.getItem("presupuestos")) || [];
+    if (presupuestos.length === 0) {
+      tableBodyPresupuestos.innerHTML = `<h1>No hay presupuestos</h1>`;
+      return;
+    }
+
+    tableBodyPresupuestos.innerHTML = presupuestos
+      .map(
+        (presupuestos) => `
+        <tr class="presupuestos-row" data-id="${presupuestos.id}">
+          <td class="container-td">${presupuestos.apellidoNombre}</td>
+          <td class="container-td">${presupuestos.fecha}</td>
+          <td class="container-td">${presupuestos.tematica}</td>
+          <td class="container-td">${presupuestos.valorTotal}</td>
+          <td class="container-td">
+            ${presupuestos.serviciosSeleccionados.map(servicio => servicio.descripcion).join("<br>")}
+          </td>
+        </tr>
+      `
+      )
+      .join("");
+
+    $$(".presupuestos-row").forEach((row) => {
+      row.addEventListener("click", () => {
+        const id = parseInt(row.dataset.id);
+        const presupuestos = JSON.parse(localStorage.getItem("presupuestos")) || [];
+        const presupuesto = presupuestos.find((s) => s.id === id);
+        if (!presupuesto) return;
+
+        document.querySelectorAll("#edit-serviciosPresupuestos input[type=checkbox]")
+          .forEach(cb => cb.checked = false);
+        const serviciosSeleccionadosIds = presupuesto.serviciosSeleccionados.map(s => s.id);
+
+        $("#edit-idPresupuestos").value = presupuesto.id;
+        $("#edit-NombrePresupuestos").value = presupuesto.apellidoNombre;
+        $("#edit-fechaPresupuestos").value = presupuesto.fecha;
+        $("#edit-TematicaPresupuestos").value = presupuesto.tematica;
+        $("#edit-valorPresupuestos").value = presupuesto.valorTotal;
+        abrirModalEdicion(presupuesto)
+      });
+    });
+  };
+
+  // Agregar presupuesto
+ $("#agregarBtnPresupuestos").addEventListener("click", () => {
+  const apellidoNombre = $("#NombrePresupuestos").value.trim();
+  const fecha = $("#fechaPresupuestos").value.trim();
+  const tematica = $("#TematicaPresupuestos").value.trim();
+  const checkboxes = document.querySelectorAll("#serviciosCheckboxes input:checked");
+  const serviciosSeleccionadosIds = Array.from(checkboxes).map(cb => Number(cb.value));
+  const todosLosServicios = JSON.parse(localStorage.getItem("servicios")) || [];
+  const serviciosSeleccionados = todosLosServicios.filter(servicio =>
+    serviciosSeleccionadosIds.includes(servicio.id)
+  );
+   const valorTotal = $("#valorPresupuestos").value.trim();
+  if (!apellidoNombre || !fecha || !tematica || serviciosSeleccionados.length === 0) {
+    alert("Todos los campos son obligatorios y se debe seleccionar al menos un servicio.");
+    return;
+  }
+  const presupuestos = JSON.parse(localStorage.getItem("presupuestos")) || [];
+  const nuevoId =
+    presupuestos.length > 0 ? Math.max(...presupuestos.map((s) => s.id)) + 1 : 1;
+
+  const nuevoPresupuesto = {
+    id: nuevoId,
+    apellidoNombre,
+    fecha,
+    tematica,
+    valorTotal,
+    serviciosSeleccionados
+  };
+
+  presupuestos.push(nuevoPresupuesto);
+  localStorage.setItem("presupuestos", JSON.stringify(presupuestos));
+
+  $("#presupuestoForm").reset();
+
+
+  checkboxes.forEach(cb => cb.checked = false);
+
+  bootstrap.Modal.getInstance($("#agregarPresupuestoModal")).hide();
+  renderPresupuestos();
+});
+
+
+  $("#guardarCambiosBtnPresupuestos").addEventListener("click", () => {
+    const id = parseInt($("#edit-idPresupuestos").value);
+    const presupuestos = JSON.parse(localStorage.getItem("presupuestos")) || [];
+    const index = presupuestos.findIndex((s) => s.id === id);
+    if (index === -1) return;
+
+    presupuestos[index] = {
+      ...presupuestos[index],
+      apellidoNombre: $("#edit-NombrePresupuestos").value.trim(),
+      fecha: $("#edit-fechaPresupuestos").value.trim(),
+      tematica: $("#edit-TematicaPresupuestos").value.trim(),
+      valorTotal: parseFloat($("#edit-valorPresupuestos").value),
+      servicios: parseFloat($("#edit-serviciosPresupuestos").value),
+    };
+
+    localStorage.setItem("presupuestos", JSON.stringify(presupuestos));
+    bootstrap.Modal.getInstance($("#editarPresupuestosModal")).hide();
+    renderPresupuestos();
+  });
+
+  // Eliminar presupuesto
+  $("#eliminarPresupuestosBtn").addEventListener("click", () => {
+    const id = parseInt($("#edit-idPresupuestos").value);
+    let presupuestos = JSON.parse(localStorage.getItem("presupuestos")) || [];
+    presupuestos = presupuestos.filter((s) => s.id !== id);
+    localStorage.setItem("presupuestos", JSON.stringify(presupuestos));
+    bootstrap.Modal.getInstance($("#editarPresupuestosModal")).hide();
+    renderPresupuestos();
+  });
+
+  function renderCheckboxesEdicion() {
+  const servicios = JSON.parse(localStorage.getItem("servicios")) || [];
+
+  const contenedor = document.getElementById("edit-serviciosPresupuestos");
+  contenedor.innerHTML = servicios
+    .map(
+      (servicio) => `
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="${servicio.id}" id="edit-servicio-${servicio.id}">
+          <label class="form-check-label" for="edit-servicio-${servicio.id}">
+            ${servicio.descripcion} ($${servicio.valor})
+          </label>
+        </div>
+      `
+    )
+    .join("");
+  }
+
+  function marcarCheckboxesSeleccionados(presupuesto) {
+  const idsSeleccionados = presupuesto.serviciosSeleccionados.map(s => s.id);
+
+  document.querySelectorAll("#edit-serviciosPresupuestos input[type=checkbox]")
+    .forEach(cb => {
+      cb.checked = idsSeleccionados.includes(Number(cb.value));
+    });
+  }
+
+  function abrirModalEdicion(presupuesto) {
+    renderCheckboxesEdicion();
+    setTimeout(() => {
+      marcarCheckboxesSeleccionados(presupuesto);
+    }, 0);
+    $("#edit-id").value = presupuesto.id;
+    $("#edit-NombrePresupuestos").value = presupuesto.apellidoNombre;
+    $("#edit-fechaPresupuestos").value = presupuesto.fecha;
+    $("#edit-TematicaPresupuestos").value = presupuesto.tematica;
+    const modal = new bootstrap.Modal(document.getElementById("editarPresupuestosModal"));
+    modal.show();
+  }
+
   renderSalones();
   renderServicios();
+  renderPresupuestos();
 });

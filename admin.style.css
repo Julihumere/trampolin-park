@@ -76,16 +76,23 @@ body {
 
 .container-th:nth-child(2),
 .container-td:nth-child(2) {
+  min-width: 150px;
   width: 40%;
 }
 
 .container-th:nth-child(3),
 .container-td:nth-child(3) {
+  min-width: 220px;
   width: 25%;
 }
 
 .container-th:nth-child(4),
 .container-td:nth-child(4) {
+  width: 15%;
+}
+.container-th:nth-child(5),
+.container-td:nth-child(5) {
+  min-width: 600px;
   width: 15%;
 }
 
@@ -140,6 +147,60 @@ body {
 
 .container-th-servicios:nth-child(2),
 .container-td-servicios:nth-child(2) {
+  width: 20%;
+}
+
+.container-table-presupuestos {
+  display: table;
+  width: 100%;
+  background-color: #02050f;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.container-thead-presupuestos {
+  display: table-header-group;
+  background-color: #000;
+}
+
+.container-tr-presupuestos {
+  display: table-row;
+}
+
+.container-th-presupuestos {
+  display: table-cell;
+  padding: 16px;
+  font-weight: 600;
+  color: #fff;
+  border-bottom: 2px solid #111;
+  text-align: left;
+}
+
+.container-tbody-presupuestos {
+  display: table-row-group;
+}
+
+.container-tbody-presupuestos tr:hover {
+  background-color: #000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.container-td-presupuestos {
+  display: table-cell;
+  padding: 12px 16px;
+  border-bottom: 1px solid #111;
+  color: #fff;
+}
+
+.container-th-presupuestos:nth-child(1),
+.container-td-presupuestos:nth-child(1) {
+  width: 80%;
+}
+
+.container-th-presupuestos:nth-child(2),
+.container-td-presupuestos:nth-child(2) {
   width: 20%;
 }
 

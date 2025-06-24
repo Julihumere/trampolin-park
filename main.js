@@ -941,10 +941,80 @@ const servicios = [
   },
 ];
 
+const presupuestos = [
+  {
+    id: 1,
+    apellidoNombre: "González María",
+    fecha: "2025-07-10",
+    tematica: "Fiesta de superhéroes",
+    valorTotal: 370,
+    serviciosSeleccionados: [
+      {
+        id: 1,
+        descripcion:
+          "Animación y juegos dirigidos por un equipo de recreadores profesionales.",
+        valor: 100,
+      },
+      {
+        id: 2,
+        descripcion:
+          "Decoración temática personalizada con globos y pancartas.",
+        valor: 150,
+      },
+      {
+        id: 5,
+        descripcion: "Alquiler de disfraces temáticos para los invitados.",
+        valor: 120,
+      },
+    ],
+  },
+  {
+    id: 2,
+    apellidoNombre: "López Javier",
+    fecha: "2025-08-15",
+    tematica: "Fiesta mágica",
+    valorTotal: 470,
+    serviciosSeleccionados: [
+      {
+        id: 3,
+        descripcion: "Catering con opciones de snacks, comidas rápidas y bebidas."
+      },
+      {
+        id: 4,
+        descripcion: "Show de magia en vivo con participación de los niños."
+      },
+      {
+        id: 8,
+        descripcion: "Pintacaritas y globoflexia para los niños."
+      },
+    ],
+  },
+  {
+    id: 3,
+    apellidoNombre: "Martínez Camila",
+    fecha: "2025-09-01",
+    tematica: "Aventura virtual",
+    valorTotal: 470,
+    serviciosSeleccionados: [
+      {
+        id: 6,
+        descripcion: "Zona de realidad virtual con juegos interactivos.",
+        valor: 250,
+      },
+      {
+        id: 7,
+        descripcion: "Fotografía profesional y álbum digital del evento.",
+        valor: 220,
+      },
+    ],
+  },
+];
+
 async function initSalones() {
   try {
     const existingSalones = JSON.parse(localStorage.getItem("salones"));
     const existingServicios = JSON.parse(localStorage.getItem("servicios"));
+    const existingPresupuestos = JSON.parse(localStorage.getItem("presupuestos"));
     if (!existingSalones || existingSalones.length === 0) {
       localStorage.setItem("salones", JSON.stringify(salones));
       console.log("Salones inicializados en localStorage");
@@ -957,8 +1027,14 @@ async function initSalones() {
     } else {
       console.log("Servicios ya existen en localStorage");
     }
+    if (!existingPresupuestos || existingPresupuestos.length === 0) {
+      localStorage.setItem("presupuestos", JSON.stringify(presupuestos));
+      console.log("Presupuestos inicializados en localStorage");
+    } else {
+      console.log("Presupuestos ya existen en localStorage");
+    }
   } catch (error) {
-    console.error("Error al inicializar los salones:", error);
+    console.error("Error al iniciar en localStorage:", error);
   }
 }
 

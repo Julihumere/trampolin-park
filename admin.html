@@ -136,6 +136,35 @@
           </table>
         </div>
       </div>
+      <h1 class="py-4" style="color: #fff">Presupuestos</h1>
+      <button
+            class="btn btn-primary mb-3"
+            data-bs-toggle="modal"
+            data-bs-target="#agregarPresupuestoModal"
+            id="agregarPresupuestosBtn"
+          >
+            + Agregar presupuesto
+          </button>
+      <div class="row">
+        <div id="table-presupuestos" class="col-md-12 mb-5">
+          <table class="container-table-presupuestos">
+            <thead class="container-thead-presupuestos">
+              <tr class="container-tr-presupuestos">
+                <th class="container-th-presupuestos">Apellido y nombre</th>
+                <th class="container-th-presupuestos">Fecha</th>
+                <th class="container-th-presupuestos">Tematica</th>
+                <th class="container-th-presupuestos">Valor Total</th>
+                <th class="container-th-presupuestos">Servicios</th>
+              </tr>
+            </thead>
+
+            <tbody
+              id="table-tbody-presupuestos"
+              class="container-tbody-presupuestos"
+            ></tbody>
+          </table>
+        </div>
+      </div>
     </main>
     <div
       class="modal fade"
@@ -212,6 +241,75 @@
       </div>
     </div>
     <!-- Editar salón -->
+    <div
+      class="modal fade"
+      id="agregarPresupuestoModal"
+      tabindex="-1"
+      aria-labelledby="modalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content text-light" style="background-color: #000030">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">Agregar nuevo presupuesto</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="presupuestoForm">
+              <div class="mb-3">
+                <label for="NombrePresupuestos" class="form-label">Apellido y nombre</label>
+                <input type="text" class="form-control" id="NombrePresupuestos" required />
+              </div>
+              <div class="mb-3">
+                <label for="fechaPresupuestos" class="form-label">Fecha</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="fechaPresupuestos"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="TematicaPresupuestos" class="form-label">Temática</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="TematicaPresupuestos"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="valorPresupuestos" class="form-label">Valor Tota</label>
+                <input type="number" class="form-control" id="valorPresupuestos" required />
+              </div>
+              <div class="mb-3">
+              <label class="form-label">Servicios seleccionados</label>
+              <div id="serviciosCheckboxes" class="form-check">
+              </div>
+            </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              id="cancelarBtn"
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <button id="agregarBtnPresupuestos" type="button" class="btn btn-success">
+              Agregar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div
       class="modal fade"
       id="editarSalonModal"
@@ -399,6 +497,86 @@
               type="button"
               class="btn btn-success"
               id="guardarCambiosBtnServicio"
+            >
+              Guardar cambios
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- Editar presupuesto -->
+    <div
+      class="modal fade"
+      id="editarPresupuestosModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div
+          class="modal-content bg-dark text-light"
+          style="background-color: #000030"
+        >
+          <div class="modal-header">
+            <h5 class="modal-title">Editar Presupuesto</h5>
+            <button
+              type="button"
+              class="btn-close bg-light"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="presupuestosForm">
+            <input type="hidden" id="edit-idPresupuestos" />
+            <input
+              type="text"
+              required
+              class="form-control mb-2"
+              id="edit-NombrePresupuestos"
+              placeholder="Apellido y nombre"
+            />
+             <input
+              type="date"
+              required
+              class="form-control mb-2"
+              id="edit-fechaPresupuestos"
+              placeholder="Fecha"
+            />
+             <input
+              type="text"
+              required
+              class="form-control mb-2"
+              id="edit-TematicaPresupuestos"
+              placeholder="Tematica"
+            />
+
+            <input
+              type="number"
+              required
+              class="form-control mb-2"
+              id="edit-valorPresupuestos"
+              placeholder="Valor Total"
+            />
+
+           <label class="form-label">Servicios seleccionados</label>
+            <div id="edit-serviciosPresupuestos" class="form-check">
+            </div>
+           </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger"
+              id="eliminarPresupuestosBtn"
+            >
+              Eliminar
+            </button>
+            <button
+              type="button"
+              class="btn btn-success"
+              id="guardarCambiosBtnPresupuestos"
             >
               Guardar cambios
             </button>

@@ -23,6 +23,6 @@ Los integrantes son:
 - Benitez Emiliano.
 - Oyuela Lautaro.
 
-Credenciales para el Admin
+Credenciales para un ejemplo de ingreso
 Usuario: emilys
 Contraseña: emilyspass
