@@ -389,9 +389,9 @@ body {
 }
 
 .galeria {
-  height: 450px;
   text-align: center;
   color: #ffffff;
+  margin-bottom: 100px;
 }
 
 .galeria-title {
