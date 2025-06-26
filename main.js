@@ -1012,21 +1012,31 @@ const presupuestos = [
 
 async function initSalones() {
   try {
-    const existingSalones = JSON.parse(localStorage.getItem("salones"));
-    const existingServicios = JSON.parse(localStorage.getItem("servicios"));
-    const existingPresupuestos = JSON.parse(localStorage.getItem("presupuestos"));
-    if (!existingSalones || existingSalones.length === 0) {
+    const VERSION = '1.0';
+    const version = localStorage.getItem('version');
+    if (!version) {
+      localStorage.removeItem("salones");
+      localStorage.setItem("version", VERSION);
       localStorage.setItem("salones", JSON.stringify(salones));
-      console.log("Salones inicializados en localStorage");
+      console.log("Salones inicializados y version seteada en localStorage");
+
+    } else if (!(JSON.parse(localStorage.getItem("salones"))) || JSON.parse(localStorage.getItem("salones")).length === 0) {
+      localStorage.setItem("salones", JSON.stringify(salones));
+      console.log("Salones inicializados en localStorage (version ya existía)");
+
     } else {
-      console.log("Salones ya existen en localStorage");
+      console.log("Salones ya existen en localStorage y version presente");
     }
+
+    const existingServicios = JSON.parse(localStorage.getItem("servicios"));
     if (!existingServicios || existingServicios.length === 0) {
       localStorage.setItem("servicios", JSON.stringify(servicios));
       console.log("Servicios inicializados en localStorage");
     } else {
       console.log("Servicios ya existen en localStorage");
     }
+    
+    const existingPresupuestos = JSON.parse(localStorage.getItem("presupuestos"));
     if (!existingPresupuestos || existingPresupuestos.length === 0) {
       localStorage.setItem("presupuestos", JSON.stringify(presupuestos));
       console.log("Presupuestos inicializados en localStorage");
