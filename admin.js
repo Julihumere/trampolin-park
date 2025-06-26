@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const tableBodySalones = $("#table-tbody-salones");
   const tableBodyServicios = $("#table-tbody-servicios");
   const tableBodyPresupuestos = $("#table-tbody-presupuestos");
-
+  let total = 0;
   const accessToken = sessionStorage.getItem("accessToken");
   if (!accessToken) {
     window.location.href = "login.html";
@@ -260,13 +260,15 @@ document.addEventListener("DOMContentLoaded", () => {
     renderServicios();
   });
 
+    document.getElementById('valorPresupuestos').value = 0;
+
   const servicios = JSON.parse(localStorage.getItem("servicios")) || [];
   const contenedorServicios = document.getElementById("serviciosCheckboxes");
   contenedorServicios.innerHTML = servicios
     .map(
       (servicio) => `
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="${servicio.id}" id="servicio-${servicio.id}">
+      <input class="form-check-input" type="checkbox" value="${servicio.id}" id="servicio-${servicio.id}" data-precio="${servicio.valor}">
       <label class="form-check-label" for="servicio-${servicio.id}">
         ${servicio.descripcion} ($${servicio.valor})
       </label>
@@ -274,6 +276,21 @@ document.addEventListener("DOMContentLoaded", () => {
   `
     )
     .join("");
+
+    const valorTotalInput = document.getElementById("valorPresupuestos");
+    const checkboxes = document.querySelectorAll("#serviciosCheckboxes input[type=checkbox]");
+    checkboxes.forEach((checkbox) => {
+      checkbox.addEventListener("change", () => {
+        const precio = parseFloat(checkbox.dataset.precio);
+
+        if (checkbox.checked) {
+          total += precio;
+        } else {
+          total -= precio;
+        }
+        valorTotalInput.value = total;
+      });
+    });
 
   const renderPresupuestos = () => {
     const presupuestos = JSON.parse(localStorage.getItem("presupuestos")) || [];
@@ -452,13 +469,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderCheckboxesEdicion() {
     const servicios = JSON.parse(localStorage.getItem("servicios")) || [];
+    const contenedorServicios = document.getElementById("edit-serviciosPresupuestos");
 
-    const contenedor = document.getElementById("edit-serviciosPresupuestos");
-    contenedor.innerHTML = servicios
+    contenedorServicios.innerHTML = servicios
       .map(
         (servicio) => `
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="${servicio.id}" id="edit-servicio-${servicio.id}">
+          <input class="form-check-input" type="checkbox" value="${servicio.id}" id="edit-servicio-${servicio.id}" data-precio="${servicio.valor}">
           <label class="form-check-label" for="edit-servicio-${servicio.id}">
             ${servicio.descripcion} ($${servicio.valor})
           </label>
@@ -466,6 +483,32 @@ document.addEventListener("DOMContentLoaded", () => {
       `
       )
       .join("");
+
+  const valorTotalInput = document.getElementById("edit-valorPresupuestos");
+  let total = 0;
+
+  const checkboxesEdit = document.querySelectorAll("#edit-serviciosPresupuestos input[type=checkbox]");
+
+  // Calcular total inicial según checkboxes ya marcados
+  checkboxesEdit.forEach((checkbox) => {
+    const precio = parseFloat(checkbox.dataset.precio);
+    if (checkbox.checked) {
+      total += precio;
+    }
+
+    // Asociar evento
+    checkbox.addEventListener("change", () => {
+      if (checkbox.checked) {
+        let nuevoValor = Number(valorTotalInput.value) + precio; 
+        valorTotalInput.value = nuevoValor;
+      } else {
+        let nuevoValor = Number(valorTotalInput.value) - precio; 
+        valorTotalInput.value = nuevoValor;
+      }
+    
+    });
+});
+
   }
 
   function marcarCheckboxesSeleccionados(presupuesto) {
